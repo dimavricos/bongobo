@@ -1,0 +1,16 @@
+	<div class="title">
+		<img src="images/billboard.png">
+		<div>Top 15 Artists Stations</div>
+		<span></span>
+	</div>
+	<div class="artists">
+
+		{{#each models}}
+		<a href="/playlists?station={{trimString title}}-music">
+			<span>{{math @index "+" 1}}</span>
+			{{trimString title}}
+		</a> 
+		{{/each}}
+	</div>
+
+<!-- {{view "playlists/artists_images"  collection_name='artists_images' param_name="image" param_value=drake lazy="true"}} -->

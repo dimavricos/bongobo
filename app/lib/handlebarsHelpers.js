@@ -1,0 +1,65 @@
+/**
+ * We inject the Handlebars instance, because this module doesn't know where
+ * the actual Handlebars instance will come from.
+ */
+ module.exports = function(Handlebars) {
+  return {
+    copyright: function(year) {
+      return new Handlebars.SafeString("&copy;" + year);
+    },
+    noimage :  function (conditional, options) {
+      if (options.hash.value === conditional) {
+        return options.inverse(this);
+      } else {
+       return options.fn(this)
+
+     } 
+   },
+
+   grouped_each : function(every, context, options) {
+    var out = "", subcontext = [], i;
+    if (context && context.length > 0) {
+      for (i = 0; i < context.length; i++) {
+        if (i > 0 && i % every === 0) {
+          out += options.fn(subcontext);
+          subcontext = [];
+        }
+        subcontext.push(context[i]);
+      }
+      out += options.fn(subcontext);
+    }
+    return out;
+  },
+
+
+  equal : function(lvalue, rvalue, options) {
+
+    if( lvalue === rvalue ) {
+      return options.fn(this); 
+    } else {
+      return options.inverse(this);
+    }
+  },
+
+  math : function(lvalue, operator, rvalue, options) {
+    lvalue = parseFloat(lvalue);
+    rvalue = parseFloat(rvalue);
+    
+    return {
+      "+": lvalue + rvalue,
+      "-": lvalue - rvalue,
+      "*": lvalue * rvalue,
+      "/": lvalue / rvalue,
+      "%": lvalue % rvalue
+    }[operator];
+  },
+
+  trimString :  function(passedString) {
+    var theString = passedString.substring(passedString.indexOf(':') + 1);
+    return new Handlebars.SafeString(theString)
+  }
+
+
+  
+}
+};

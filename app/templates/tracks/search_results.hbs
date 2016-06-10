@@ -1,0 +1,23 @@
+ 
+
+    
+  <div class="title">
+    <div>{{this.params.value}} ({{models.length}} TRACKS)</div>
+  </div>
+ 
+<div class="container">
+  <ul class="my-playlist-tracks">
+    {{#each models}} 
+    <li>  
+      <a href="">
+         <img src="{{snippet.thumbnails.high.url}}">
+        <span>{{snippet.title}} </span>
+      </a> 
+   </li>
+
+
+   {{/each}}
+ </ul>
+</div>
+
+

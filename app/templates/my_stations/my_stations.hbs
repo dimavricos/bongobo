@@ -1,0 +1,108 @@
+ <div class="my-stations-container">
+  <div>
+    <span class="close-popup">
+      <i class="fa fa-times"></i>
+    </span>
+  </div>
+
+  {{view "my_stations/create_station"}}
+
+  <ul class="my-stations">
+
+
+
+    <li class="first-li">My Stations 
+      <span class="open-edit-my-stations">EDIT <i class="fa fa-pencil-square-o"></i></span>
+    </li>
+
+    {{#each models}}
+
+    <li data-id="{{playlistId}}" class="my-station">  
+      <div class="my-station-title">{{stationName}}  <img src="images/radio-icon.png">
+        <span class="open"><i class="fa fa-chevron-down"></i></span>
+        <span class="count">({{playlists.length}}) <span>playlists</span></span>  
+      </div> 
+      <ul class="my-station-playlists">
+       {{#each playlists}}  
+       <li> 
+        <div class="playlist-name">
+          <a href="/tracks?station={{this.station}}&playlistId={{this.id}}">
+            <img src="{{image}}">
+            <span>{{this.name}}</span>
+          </a>
+        </div> 
+
+      </li>
+      {{else}}
+      <li class='no-playlists' title="No playlists yet! Add songs to your playlist using the + icon">
+        <b>No playlists yet!</b> 
+        Add playlists to your station using the
+        <i><img src="images/radio-icon.png"></i> button
+      </li>
+      {{this.length}}{{/each}} 
+    </ul>
+  </li>
+
+  {{else}}
+
+  <li>
+    <div class="hello-message">
+
+      <section>
+        NO STATIONS YET. CREATE STATIONS AND ADD PLAYLISTS!
+      </section>
+    </div>
+  </li>
+
+  {{/each}} 
+</ul>
+
+</div>
+
+
+<div class="pick-a-station-container">
+
+
+  <div class="pick-a-station">
+   <span class="close-popup">
+    <i class="fa fa-times"></i>
+  </span>
+  <ul>
+    <li>ADD PLAYLIST TO A STATION</li>
+  </ul>
+  <div class="picked-playlist">
+   <img src="" class="picked-station-image">
+   <div class="picked-station-id"></div>
+   <div class="picked-station-name"></div>
+   <div class="picked-station-station"></div>
+ </div>
+ <ul>
+  <li>PICK A STATION:</li>
+  {{#each models}}
+  <li >
+    <div data-id="{{stationId}}" class="checkboxFour"> 
+      <input type="radio" name="choose-station" value="{{stationId}}" id="{{stationId}}">
+      <label for="{{stationId}}">{{stationName}} <span>({{playlists.length}}) playlists</span>  </label> 
+    </div>
+  </li>
+
+  {{else}}
+  {{view "my_stations/create_station"}}
+
+
+
+  {{/each}} 
+
+</ul>
+
+<button class="open-small-message">ADD</button> 
+
+
+<div class="small-message">
+  <div>sure?</div>
+  <button class="add-playlist-to-station">YES</button>
+  <button class="not-sure">NO</button>
+</div>
+</div>
+
+</div>

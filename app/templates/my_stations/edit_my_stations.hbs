@@ -1,0 +1,40 @@
+<ul class="my-stations">
+
+
+
+ {{#each models}}
+ <li data-id="{{stationId}}" class="my-station">  
+  <div class="my-station-title">{{stationName}}  
+   <span class="count">({{playlists.length}}) <span>playlists</span></span>  
+   <span class="delete-station"> <span>DELETE STATION</span> <i class="fa fa-trash-o"></i></span>
+   
+ </div> 
+ <ul class="my-station-playlists" data-id="{{stationId}}">
+   {{#each playlists}}  
+   <li data-station="{{this.station}}"> 
+    <div class="col-md-10 playlist-name">
+      <img src="{{this.image}}">
+      {{this.name}}
+    </div> 
+    <div class="col-md-2 playlist-actions">
+      <span class="remove-playlist" data-id="{{this.id}}">  
+        <i class="fa fa-times"></i>
+      </span> 
+      
+    </div>   
+  </li>
+  {{else}}
+  <li class='no-playlists'>
+    <b>No playlists yet!</b> 
+  </li>
+  {{this.length}}{{/each}} 
+</ul>
+</li>
+
+{{else}}
+
+<span class="no-stations">YOU HAVE NO STATIONS YET</span>
+
+{{/each}} 
+</ul>
+

@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>{{appData.title}}</title>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href="/styles.css" media="screen" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body> 
+
+
+  {{view "my_stations/index"}}
+  
+
+
+
+  <div class="dark-bg header"> 
+    <div class="container">
+     <div class="col-md-1">
+      <div class="row logo">
+        <div><a href="http://localhost:3030/"><img src="images/logo.png"></a></div> 
+      </div>
+    </div>
+    
+    <div class="col-md-9 search-container"> 
+      <div class="row">{{view "search/tracks_playlists"}}</div>  
+    </div> 
+    <div class="col-md-2">
+      <div class="row">
+       {{view "my_stations/open_my_stations"}}
+     </div>
+   </div>
+ </div> 
+
+</div>
+
+
+
+
+
+{{view "search/index"}}
+{{view "search/genres"}}
+
+
+<div class="container">
+
+
+ {{{body}}} 
+
+
+
+</div>
+
+<div class="powered">
+  <div>Powered by</div>
+<img src="images/google.png">
+<img src="images/yt.png">
+<img src="images/billboard.png">
+</div>
+<div class="dark-bg footer">
+  <div class="container">
+    Copyright 2016 © | Bongobo.com 
+  </div>
+</div>
+
+
+<script src="/mergedAssets.js"></script>
+<script>
+(function() {
+  var App = window.App = new (require('app/app'))({{json appData}});
+  App.bootstrapData({{json bootstrappedData}});
+  App.start();
+})();
+</script>
+
+
+
+</body>
+
+</html>

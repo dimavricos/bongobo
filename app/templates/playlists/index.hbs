@@ -1,0 +1,45 @@
+
+
+
+<div class="col-md-8 col-md-offset-2">
+  <div class="row">
+
+  	<div class="title">
+      <div>{{this.params.station}} ({{models.length}} Playlists)</div> 
+      <span></span>
+    </div>
+    <div class="playlists-carousel"> 
+      {{#grouped_each 9 models}}
+      <div class="item">  
+       {{#each this}}
+       {{#noimage snippet.thumbnails.medium.url value="https://i.ytimg.com/vi/default.jpg"}}
+       <a href="/tracks?station={{../../../params.station}}&playlistId={{id.playlistId}}" class="show">
+        <div data-id="{{id.playlistId}}" class="image"> 
+         <img src="{{snippet.thumbnails.medium.url}}" class="thumb"> 
+         <div class="playlist-details"> 
+
+          <i class="fa fa-play-circle"></i>
+        </div> 
+
+      </div>
+      <span class="playlist-title">{{snippet.title}}</span> 
+    </a>  
+    {{/noimage}}   
+
+    {{/each}} 
+  </div>
+  {{/grouped_each}} 
+</div>
+
+</div>
+</div>
+
+
+
+{{#if models}}
+{{else}}
+<span class="no-results">NO PLAYLISTS FOUND</span>
+{{/if}}
+
+
+
