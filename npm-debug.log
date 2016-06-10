@@ -1,187 +1,144 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
-1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'install',
-1 verbose cli   'backbone.localstorage' ]
-2 info using npm@1.4.28
-3 info using node@v0.10.35
-4 verbose node symlink C:\Program Files\nodejs\\node.exe
-5 warn package.json karma-chrome-launcher@0.1.7 No README data
-6 warn package.json karma-firefox-launcher@0.1.4 No README data
-7 warn package.json karma-mocha@0.1.10 No README data
-8 warn package.json karma-phantomjs-launcher@0.1.4 No README data
-9 verbose readDependencies using package.json deps
-10 verbose cache add [ 'backbone.localstorage', null ]
-11 verbose cache add name=undefined spec="backbone.localstorage" args=["backbone.localstorage",null]
-12 verbose parsed url { protocol: null,
-12 verbose parsed url   slashes: null,
-12 verbose parsed url   auth: null,
-12 verbose parsed url   host: null,
-12 verbose parsed url   port: null,
-12 verbose parsed url   hostname: null,
-12 verbose parsed url   hash: null,
-12 verbose parsed url   search: null,
-12 verbose parsed url   query: null,
-12 verbose parsed url   pathname: 'backbone.localstorage',
-12 verbose parsed url   path: 'backbone.localstorage',
-12 verbose parsed url   href: 'backbone.localstorage' }
-13 silly lockFile 56f27198-backbone-localstorage backbone.localstorage
-14 verbose lock backbone.localstorage C:\Users\Jim\AppData\Roaming\npm-cache\56f27198-backbone-localstorage.lock
-15 silly lockFile 56f27198-backbone-localstorage backbone.localstorage
-16 silly lockFile 56f27198-backbone-localstorage backbone.localstorage
-17 verbose addNamed [ 'backbone.localstorage', '' ]
-18 verbose addNamed [ null, '*' ]
-19 silly lockFile 4eb42dfe-backbone-localstorage backbone.localstorage@
-20 verbose lock backbone.localstorage@ C:\Users\Jim\AppData\Roaming\npm-cache\4eb42dfe-backbone-localstorage.lock
-21 silly addNameRange { name: 'backbone.localstorage', range: '*', hasData: false }
-22 verbose request where is /backbone.localstorage
-23 verbose request registry https://registry.npmjs.org/
-24 verbose request id 6f02f0df982bc871
-25 verbose url raw /backbone.localstorage
-26 verbose url resolving [ 'https://registry.npmjs.org/', './backbone.localstorage' ]
-27 verbose url resolved https://registry.npmjs.org/backbone.localstorage
-28 verbose request where is https://registry.npmjs.org/backbone.localstorage
-29 info trying registry request attempt 1 at 16:21:01
-30 verbose etag "6LNR1YNPT74LLAYCGCQRN4WGN"
-31 http GET https://registry.npmjs.org/backbone.localstorage
-32 http 304 https://registry.npmjs.org/backbone.localstorage
-33 silly registry.get cb [ 304,
-33 silly registry.get   { date: 'Mon, 16 Feb 2015 14:21:02 GMT',
-33 silly registry.get     server: 'Apache',
-33 silly registry.get     via: '1.1 varnish',
-33 silly registry.get     'last-modified': 'Mon, 16 Feb 2015 14:21:03 GMT',
-33 silly registry.get     'cache-control': 'max-age=60',
-33 silly registry.get     etag: '"6LNR1YNPT74LLAYCGCQRN4WGN"',
-33 silly registry.get     age: '0',
-33 silly registry.get     'x-served-by': 'cache-fra1220-FRA',
-33 silly registry.get     'x-cache': 'MISS',
-33 silly registry.get     'x-cache-hits': '0',
-33 silly registry.get     'x-timer': 'S1424096462.249380,VS0,VE875',
-33 silly registry.get     vary: 'Accept',
-33 silly registry.get     'content-length': '0',
-33 silly registry.get     'keep-alive': 'timeout=10, max=50',
-33 silly registry.get     connection: 'Keep-Alive' } ]
-34 verbose etag https://registry.npmjs.org/backbone.localstorage from cache
-35 silly addNameRange number 2 { name: 'backbone.localstorage', range: '*', hasData: true }
-36 silly addNameRange versions [ 'backbone.localstorage',
-36 silly addNameRange   [ '1.1.3',
-36 silly addNameRange     '1.1.4',
-36 silly addNameRange     '1.1.5',
-36 silly addNameRange     '1.1.6',
-36 silly addNameRange     '1.1.7',
-36 silly addNameRange     '1.1.9',
-36 silly addNameRange     '1.1.10',
-36 silly addNameRange     '1.1.11',
-36 silly addNameRange     '1.1.12',
-36 silly addNameRange     '1.1.13',
-36 silly addNameRange     '1.1.14',
-36 silly addNameRange     '1.1.15',
-36 silly addNameRange     '1.1.16' ] ]
-37 verbose addNamed [ 'backbone.localstorage', '1.1.16' ]
-38 verbose addNamed [ '1.1.16', '1.1.16' ]
-39 silly lockFile 7aee3268-backbone-localstorage-1-1-16 backbone.localstorage@1.1.16
-40 verbose lock backbone.localstorage@1.1.16 C:\Users\Jim\AppData\Roaming\npm-cache\7aee3268-backbone-localstorage-1-1-16.lock
-41 silly lockFile 7aee3268-backbone-localstorage-1-1-16 backbone.localstorage@1.1.16
-42 silly lockFile 7aee3268-backbone-localstorage-1-1-16 backbone.localstorage@1.1.16
-43 silly lockFile 4eb42dfe-backbone-localstorage backbone.localstorage@
-44 silly lockFile 4eb42dfe-backbone-localstorage backbone.localstorage@
-45 silly resolved [ { author:
-45 silly resolved      { name: 'Jerome Gravel-Niquet',
-45 silly resolved        email: 'jeromegn@gmail.com',
-45 silly resolved        url: 'http://jgn.me' },
-45 silly resolved     name: 'backbone.localstorage',
-45 silly resolved     version: '1.1.16',
-45 silly resolved     repository:
-45 silly resolved      { type: 'git',
-45 silly resolved        url: 'git://github.com/jeromegn/Backbone.localStorage.git' },
-45 silly resolved     devDependencies:
-45 silly resolved      { 'uglify-js': '~1.2.6',
-45 silly resolved        'mocha-phantomjs': '^3.5.1',
-45 silly resolved        browserify: '~2.x.x',
-45 silly resolved        jquery: '~2.1.0',
-45 silly resolved        backbone: '~1.x.x',
-45 silly resolved        underscore: '>=1.4.0' },
-45 silly resolved     peerDependencies: { backbone: '~1.x.x' },
-45 silly resolved     keywords: [ 'backbone', 'localstorage', 'local', 'storage', 'cache', 'sync' ],
-45 silly resolved     main: './backbone.localStorage.js',
-45 silly resolved     engines: { node: '*' },
-45 silly resolved     gitHead: '728194adef60befefed1416825498d1b53cd517a',
-45 silly resolved     description: '[![Build Status](https://secure.travis-ci.org/jeromegn/Backbone.localStorage.png?branch=master)](http://travis-ci.org/jeromegn/Backbone.localStorage)',
-45 silly resolved     bugs: { url: 'https://github.com/jeromegn/Backbone.localStorage/issues' },
-45 silly resolved     homepage: 'https://github.com/jeromegn/Backbone.localStorage',
-45 silly resolved     _id: 'backbone.localstorage@1.1.16',
-45 silly resolved     scripts: {},
-45 silly resolved     _shasum: '3df5101d93abcee04f326035540f425dd0487916',
-45 silly resolved     _from: 'backbone.localstorage@',
-45 silly resolved     _npmVersion: '2.1.17',
-45 silly resolved     _nodeVersion: '0.10.35',
-45 silly resolved     _npmUser: { name: 'jeromegn', email: 'jeromegn@gmail.com' },
-45 silly resolved     maintainers: [ [Object] ],
-45 silly resolved     dist:
-45 silly resolved      { shasum: '3df5101d93abcee04f326035540f425dd0487916',
-45 silly resolved        tarball: 'http://registry.npmjs.org/backbone.localstorage/-/backbone.localstorage-1.1.16.tgz' },
-45 silly resolved     directories: {},
-45 silly resolved     _resolved: 'https://registry.npmjs.org/backbone.localstorage/-/backbone.localstorage-1.1.16.tgz',
-45 silly resolved     readme: 'ERROR: No README data found!' } ]
-46 info install backbone.localstorage@1.1.16 into C:\Users\Jim\Desktop\youtubeapi
-47 info installOne backbone.localstorage@1.1.16
-48 verbose node_modules\backbone.localstorage unbuild
-49 info preuninstall backbone.localstorage@1.1.16
-50 info uninstall backbone.localstorage@1.1.16
-51 verbose true,C:\Users\Jim\Desktop\youtubeapi\node_modules,C:\Users\Jim\Desktop\youtubeapi\node_modules unbuild backbone.localstorage@1.1.16
-52 info postuninstall backbone.localstorage@1.1.16
-53 verbose tar unpack C:\Users\Jim\AppData\Roaming\npm-cache\backbone.localstorage\1.1.16\package.tgz
-54 silly lockFile 136f6d21-de-modules-backbone-localstorage tar://C:\Users\Jim\Desktop\youtubeapi\node_modules\backbone.localstorage
-55 verbose lock tar://C:\Users\Jim\Desktop\youtubeapi\node_modules\backbone.localstorage C:\Users\Jim\AppData\Roaming\npm-cache\136f6d21-de-modules-backbone-localstorage.lock
-56 silly lockFile 4820dde0--localstorage-1-1-16-package-tgz tar://C:\Users\Jim\AppData\Roaming\npm-cache\backbone.localstorage\1.1.16\package.tgz
-57 verbose lock tar://C:\Users\Jim\AppData\Roaming\npm-cache\backbone.localstorage\1.1.16\package.tgz C:\Users\Jim\AppData\Roaming\npm-cache\4820dde0--localstorage-1-1-16-package-tgz.lock
-58 silly gunzTarPerm modes [ '777', '666' ]
-59 silly gunzTarPerm extractEntry package.json
-60 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
-61 silly gunzTarPerm extractEntry .npmignore
-62 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
-63 silly gunzTarPerm extractEntry README.md
-64 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
-65 silly gunzTarPerm extractEntry backbone.localStorage-min.js
-66 silly gunzTarPerm extractEntry backbone.localStorage.js
-67 silly gunzTarPerm modified mode [ 'backbone.localStorage.js', 420, 438 ]
-68 silly gunzTarPerm extractEntry .documentup.json
-69 silly gunzTarPerm extractEntry .travis.yml
-70 silly gunzTarPerm extractEntry CHANGELOG.md
-71 silly lockFile 136f6d21-de-modules-backbone-localstorage tar://C:\Users\Jim\Desktop\youtubeapi\node_modules\backbone.localstorage
-72 silly lockFile 136f6d21-de-modules-backbone-localstorage tar://C:\Users\Jim\Desktop\youtubeapi\node_modules\backbone.localstorage
-73 silly lockFile 4820dde0--localstorage-1-1-16-package-tgz tar://C:\Users\Jim\AppData\Roaming\npm-cache\backbone.localstorage\1.1.16\package.tgz
-74 silly lockFile 4820dde0--localstorage-1-1-16-package-tgz tar://C:\Users\Jim\AppData\Roaming\npm-cache\backbone.localstorage\1.1.16\package.tgz
-75 info preinstall backbone.localstorage@1.1.16
-76 verbose readDependencies using package.json deps
-77 verbose readDependencies using package.json deps
-78 silly resolved []
-79 verbose about to build C:\Users\Jim\Desktop\youtubeapi\node_modules\backbone.localstorage
-80 info build C:\Users\Jim\Desktop\youtubeapi\node_modules\backbone.localstorage
-81 verbose linkStuff [ false,
-81 verbose linkStuff   false,
-81 verbose linkStuff   false,
-81 verbose linkStuff   'C:\\Users\\Jim\\Desktop\\youtubeapi\\node_modules' ]
-82 info linkStuff backbone.localstorage@1.1.16
-83 verbose linkBins backbone.localstorage@1.1.16
-84 verbose linkMans backbone.localstorage@1.1.16
-85 verbose rebuildBundles backbone.localstorage@1.1.16
-86 info install backbone.localstorage@1.1.16
-87 info postinstall backbone.localstorage@1.1.16
-88 error peerinvalid The package karma does not satisfy its siblings' peerDependencies requirements!
-88 error peerinvalid Peer karma-chrome-launcher@0.1.7 wants karma@>=0.9.3
-88 error peerinvalid Peer karma-firefox-launcher@0.1.4 wants karma@>=0.9
-88 error peerinvalid Peer karma-html2js-preprocessor@0.1.0 wants karma@>=0.9
-88 error peerinvalid Peer karma-mocha@0.1.10 wants karma@>=0.12.8
-88 error peerinvalid Peer karma-requirejs@0.2.2 wants karma@>=0.9
-88 error peerinvalid Peer karma-jasmine@0.1.5 wants karma@>=0.9
-88 error peerinvalid Peer karma-script-launcher@0.1.0 wants karma@>=0.9
-88 error peerinvalid Peer karma-coffee-preprocessor@0.1.3 wants karma@>=0.9
-88 error peerinvalid Peer karma-phantomjs-launcher@0.1.4 wants karma@>=0.9
-89 error System Windows_NT 6.2.9200
-90 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "backbone.localstorage"
-91 error cwd C:\Users\Jim\Desktop\youtubeapi
-92 error node -v v0.10.35
-93 error npm -v 1.4.28
-94 error code EPEERINVALID
-95 verbose exit [ 1, true ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'grunt-cli' ]
+2 info using npm@1.4.14
+3 info using node@v0.10.29
+4 verbose cache add [ 'grunt-cli', null ]
+5 verbose cache add name=undefined spec="grunt-cli" args=["grunt-cli",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'grunt-cli',
+6 verbose parsed url   path: 'grunt-cli',
+6 verbose parsed url   href: 'grunt-cli' }
+7 silly lockFile 671ef8ac-grunt-cli grunt-cli
+8 verbose lock grunt-cli /Users/Dimitris/.npm/671ef8ac-grunt-cli.lock
+9 silly lockFile 671ef8ac-grunt-cli grunt-cli
+10 silly lockFile 671ef8ac-grunt-cli grunt-cli
+11 verbose addNamed [ 'grunt-cli', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile d63f3d0b-grunt-cli grunt-cli@
+14 verbose lock grunt-cli@ /Users/Dimitris/.npm/d63f3d0b-grunt-cli.lock
+15 silly addNameRange { name: 'grunt-cli', range: '*', hasData: false }
+16 verbose url raw grunt-cli
+17 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-cli' ]
+18 verbose url resolved https://registry.npmjs.org/grunt-cli
+19 info trying registry request attempt 1 at 20:38:26
+20 verbose etag "86A2R22NHSC9PIWOVCLBKLBJR"
+21 http GET https://registry.npmjs.org/grunt-cli
+22 http 304 https://registry.npmjs.org/grunt-cli
+23 silly registry.get cb [ 304,
+23 silly registry.get   { date: 'Fri, 10 Jun 2016 17:38:28 GMT',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     'cache-control': 'max-age=300',
+23 silly registry.get     etag: '"86A2R22NHSC9PIWOVCLBKLBJR"',
+23 silly registry.get     age: '113',
+23 silly registry.get     connection: 'keep-alive',
+23 silly registry.get     'x-served-by': 'cache-fra1230-FRA',
+23 silly registry.get     'x-cache': 'HIT',
+23 silly registry.get     'x-cache-hits': '1',
+23 silly registry.get     'x-timer': 'S1465580308.313744,VS0,VE0',
+23 silly registry.get     vary: 'Accept-Encoding' } ]
+24 verbose etag grunt-cli from cache
+25 silly addNameRange number 2 { name: 'grunt-cli', range: '*', hasData: true }
+26 silly addNameRange versions [ 'grunt-cli',
+26 silly addNameRange   [ '0.1.0',
+26 silly addNameRange     '0.1.1',
+26 silly addNameRange     '0.1.2',
+26 silly addNameRange     '0.1.3',
+26 silly addNameRange     '0.1.4',
+26 silly addNameRange     '0.1.5',
+26 silly addNameRange     '0.1.6',
+26 silly addNameRange     '0.1.7',
+26 silly addNameRange     '0.1.8',
+26 silly addNameRange     '0.1.9',
+26 silly addNameRange     '0.1.10',
+26 silly addNameRange     '0.1.11',
+26 silly addNameRange     '0.1.12',
+26 silly addNameRange     '0.1.13',
+26 silly addNameRange     '1.0.0-rc1',
+26 silly addNameRange     '1.0.0',
+26 silly addNameRange     '1.0.1',
+26 silly addNameRange     '1.1.0',
+26 silly addNameRange     '1.2.0' ] ]
+27 verbose addNamed [ 'grunt-cli', '1.2.0' ]
+28 verbose addNamed [ '1.2.0', '1.2.0' ]
+29 silly lockFile 923e46ff-grunt-cli-1-2-0 grunt-cli@1.2.0
+30 verbose lock grunt-cli@1.2.0 /Users/Dimitris/.npm/923e46ff-grunt-cli-1-2-0.lock
+31 silly lockFile 923e46ff-grunt-cli-1-2-0 grunt-cli@1.2.0
+32 silly lockFile 923e46ff-grunt-cli-1-2-0 grunt-cli@1.2.0
+33 silly lockFile d63f3d0b-grunt-cli grunt-cli@
+34 silly lockFile d63f3d0b-grunt-cli grunt-cli@
+35 silly resolved [ { name: 'grunt-cli',
+35 silly resolved     description: 'The grunt command line interface',
+35 silly resolved     version: '1.2.0',
+35 silly resolved     author:
+35 silly resolved      { name: 'Grunt Development Team',
+35 silly resolved        url: 'http://gruntjs.com/development-team' },
+35 silly resolved     repository:
+35 silly resolved      { type: 'git',
+35 silly resolved        url: 'git+https://github.com/gruntjs/grunt-cli.git' },
+35 silly resolved     license: 'MIT',
+35 silly resolved     engines: { node: '>=0.10.0' },
+35 silly resolved     scripts: { test: 'node bin/grunt test' },
+35 silly resolved     bin: { grunt: 'bin/grunt' },
+35 silly resolved     dependencies:
+35 silly resolved      { 'findup-sync': '~0.3.0',
+35 silly resolved        'grunt-known-options': '~1.1.0',
+35 silly resolved        nopt: '~3.0.6',
+35 silly resolved        resolve: '~1.1.0' },
+35 silly resolved     devDependencies: { grunt: '~0.4.5', 'grunt-contrib-jshint': '~1.0.0' },
+35 silly resolved     files: [ 'bin', 'completion', 'lib' ],
+35 silly resolved     appveyor_id: 'prp6g944b05jsq6d',
+35 silly resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+35 silly resolved     gitHead: 'edd8bd29a72f2f28b63fe2629fcb7b9d9f2feb46',
+35 silly resolved     bugs: { url: 'https://github.com/gruntjs/grunt-cli/issues' },
+35 silly resolved     homepage: 'https://github.com/gruntjs/grunt-cli#readme',
+35 silly resolved     _id: 'grunt-cli@1.2.0',
+35 silly resolved     _shasum: '562b119ebb069ddb464ace2845501be97b35b6a8',
+35 silly resolved     _from: 'grunt-cli@',
+35 silly resolved     _npmVersion: '3.8.2',
+35 silly resolved     _nodeVersion: '4.2.3',
+35 silly resolved     _npmUser: { name: 'vladikoff', email: 'vlad@vladikoff.com' },
+35 silly resolved     dist:
+35 silly resolved      { shasum: '562b119ebb069ddb464ace2845501be97b35b6a8',
+35 silly resolved        tarball: 'https://registry.npmjs.org/grunt-cli/-/grunt-cli-1.2.0.tgz' },
+35 silly resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+35 silly resolved     _npmOperationalInternal:
+35 silly resolved      { host: 'packages-12-west.internal.npmjs.com',
+35 silly resolved        tmp: 'tmp/grunt-cli-1.2.0.tgz_1459558434299_0.8824446983635426' },
+35 silly resolved     directories: {},
+35 silly resolved     _resolved: 'https://registry.npmjs.org/grunt-cli/-/grunt-cli-1.2.0.tgz',
+35 silly resolved     readme: 'ERROR: No README data found!' } ]
+36 info install grunt-cli@1.2.0 into /usr/local/lib
+37 info installOne grunt-cli@1.2.0
+38 info /usr/local/lib/node_modules/grunt-cli unbuild
+39 info preuninstall grunt-cli@0.1.13
+40 info uninstall grunt-cli@0.1.13
+41 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild grunt-cli@0.1.13
+42 verbose /usr/local/bin,[object Object] binRoot
+43 info /usr/local/lib/node_modules/grunt-cli unbuild
+44 info preuninstall grunt-cli@0.1.13
+45 info uninstall grunt-cli@0.1.13
+46 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild grunt-cli@0.1.13
+47 verbose /usr/local/bin,[object Object] binRoot
+48 error error rolling back Error: EACCES, unlink '/usr/local/bin/grunt'
+48 error error rolling back  grunt-cli@1.2.0 { [Error: EACCES, unlink '/usr/local/bin/grunt'] errno: 3, code: 'EACCES', path: '/usr/local/bin/grunt' }
+49 error Error: EACCES, unlink '/usr/local/bin/grunt'
+49 error  { [Error: EACCES, unlink '/usr/local/bin/grunt'] errno: 3, code: 'EACCES', path: '/usr/local/bin/grunt' }
+50 error Please try running this command again as root/Administrator.
+51 error System Darwin 13.4.0
+52 error command "node" "/usr/local/bin/npm" "install" "-g" "grunt-cli"
+53 error cwd /Users/Dimitris/bongobo
+54 error node -v v0.10.29
+55 error npm -v 1.4.14
+56 error path /usr/local/bin/grunt
+57 error code EACCES
+58 error errno 3
+59 error stack Error: EACCES, unlink '/usr/local/bin/grunt'
+60 verbose exit [ 3, true ]
