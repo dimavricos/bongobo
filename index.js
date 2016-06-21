@@ -49,9 +49,8 @@ app.use(server);
  * Start the Express server.
  */
 function start(){
-  var port = process.env.OPENSHIFT_NODEJS_PORT || 8080
-  var ipAddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
-  app.listen(port ,  ipAddress);
+  var port = process.env.PORT || 3030;
+  app.listen(port);
   console.log("server pid %s listening on port %s in %s mode",
     process.pid,
     port,
