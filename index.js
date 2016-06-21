@@ -54,8 +54,7 @@ app.use(server);
  * Start the Express server.
  */
 function start(){
-  var port = process.env.PORT || 3030;
-  app..listen(server_port, server_ip_address, function () {
+server.listen(server_port, server_ip_address, function () {
   console.log( "Listening on " + server_ip_address + ", server_port " + port )
 });
 }
