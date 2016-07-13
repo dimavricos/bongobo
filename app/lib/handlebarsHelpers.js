@@ -62,6 +62,7 @@
 
   removeSpace: function(text) {
     text = Handlebars.Utils.escapeExpression(text);
+    text = text.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g,' ');
     text = text.split(' ').join('-');
     return new Handlebars.SafeString(text);
   }
