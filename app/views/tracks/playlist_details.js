@@ -43,12 +43,12 @@ module.exports = BaseView.extend({
 		});
 	},
 
-	twitterShare : function(){
+	twitterShare : function(e){
 		var width = 575,
 		height = 400,
 		left = ($(window).width() - width) / 2,
 		top = ($(window).height() - height) / 2,
-		url = this.href,
+		url = $(e.currentTarget).attr('href'),
 		opts = 'status=1' +
 		',width=' + width +
 		',height=' + height +
@@ -68,7 +68,7 @@ module.exports = BaseView.extend({
 		height = 600,
 		left = ($(window).width() - width) / 2,
 		top = ($(window).height() - height) / 2,
-		url = this.href,
+		url = $(e.currentTarget).attr('href'),
 		opts = 'status=1' +
 		',menu-bar=no' +
 		',toolbar=no,resizable=yes,scrollbars=yes' +
