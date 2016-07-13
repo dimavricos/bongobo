@@ -268,7 +268,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 templates["playlists/index"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, stack2, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
+  var buffer = "", stack1, stack2, options, functionType="function", escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing, self=this;
 
 function program1(depth0,data,depth1) {
   
@@ -293,9 +293,12 @@ function program2(depth0,data,depth2) {
   }
 function program3(depth0,data,depth3) {
   
-  var buffer = "", stack1;
+  var buffer = "", stack1, options;
   buffer += "\n       <a href=\"/tracks?station="
     + escapeExpression(((stack1 = ((stack1 = depth3.params),stack1 == null || stack1 === false ? stack1 : stack1.station)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "&name=";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.removeSpace || depth0.removeSpace),stack1 ? stack1.call(depth0, ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.title), options) : helperMissing.call(depth0, "removeSpace", ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.title), options)))
     + "&playlistId="
     + escapeExpression(((stack1 = ((stack1 = depth0.id),stack1 == null || stack1 === false ? stack1 : stack1.playlistId)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\" class=\"show\">\n        <div data-id=\""

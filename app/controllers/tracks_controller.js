@@ -9,11 +9,14 @@ module.exports = {
 			
 		};
 		this.app.fetch(spec, function(err, result) {
-			console.log("AAAAAA" , result)
-			callback(err, result);
-		});
 
-	},
+			if (err) return callback(err);
 
-	
+			var str = result.playlist_details.params.name
+			var name = str.split('-').join(' '); 
+			this.app.set('title',  name + ' | Bongobo');
+
+			callback(null, result);
+		}.bind(this));
+	}
 };

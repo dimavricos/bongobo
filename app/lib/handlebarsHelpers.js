@@ -57,6 +57,13 @@
   trimString :  function(passedString) {
     var theString = passedString.substring(passedString.indexOf(':') + 1);
     return new Handlebars.SafeString(theString)
+  },
+
+
+  removeSpace: function(text) {
+    text = Handlebars.Utils.escapeExpression(text);
+    text = text.split(' ').join('-');
+    return new Handlebars.SafeString(text);
   }
 
 
