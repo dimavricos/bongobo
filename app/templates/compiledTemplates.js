@@ -133,6 +133,8 @@ function program2(depth0,data) {
   var buffer = "", stack1, stack2;
   buffer += "  \r\n       <li> \r\n        <div class=\"playlist-name\">\r\n          <a href=\"/tracks?station="
     + escapeExpression(((stack1 = depth0.station),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "&name="
+    + escapeExpression(((stack1 = depth0.name),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "&playlistId="
     + escapeExpression(((stack1 = depth0.id),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\">\r\n            <img src=\"";
@@ -230,7 +232,7 @@ function program1(depth0,data) {
   var buffer = "", stack1, options;
   buffer += "\n		<a href=\"/playlists?station=";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers.trimString || depth0.trimString),stack1 ? stack1.call(depth0, depth0.title, options) : helperMissing.call(depth0, "trimString", depth0.title, options)))
+  buffer += escapeExpression(((stack1 = helpers.trimAndPavla || depth0.trimAndPavla),stack1 ? stack1.call(depth0, depth0.title, options) : helperMissing.call(depth0, "trimAndPavla", depth0.title, options)))
     + "-music\">\n			<span>";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.math || depth0.math),stack1 ? stack1.call(depth0, ((stack1 = data),stack1 == null || stack1 === false ? stack1 : stack1.index), "+", 1, options) : helperMissing.call(depth0, "math", ((stack1 = data),stack1 == null || stack1 === false ? stack1 : stack1.index), "+", 1, options)))
@@ -268,7 +270,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 templates["playlists/index"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, stack2, options, functionType="function", escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing, self=this;
+  var buffer = "", stack1, stack2, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, functionType="function", self=this;
 
 function program1(depth0,data,depth1) {
   
@@ -294,8 +296,9 @@ function program2(depth0,data,depth2) {
 function program3(depth0,data,depth3) {
   
   var buffer = "", stack1, options;
-  buffer += "\n       <a href=\"/tracks?station="
-    + escapeExpression(((stack1 = ((stack1 = depth3.params),stack1 == null || stack1 === false ? stack1 : stack1.station)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+  buffer += "\n       <a href=\"/tracks?station=";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.removeSpace || depth3.removeSpace),stack1 ? stack1.call(depth0, ((stack1 = depth3.params),stack1 == null || stack1 === false ? stack1 : stack1.station), options) : helperMissing.call(depth0, "removeSpace", ((stack1 = depth3.params),stack1 == null || stack1 === false ? stack1 : stack1.station), options)))
     + "&name=";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.removeSpace || depth0.removeSpace),stack1 ? stack1.call(depth0, ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.title), options) : helperMissing.call(depth0, "removeSpace", ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.title), options)))
@@ -323,8 +326,9 @@ function program7(depth0,data) {
   return "\n<span class=\"no-results\">NO PLAYLISTS FOUND</span>\n";
   }
 
-  buffer += "\n\n\n<div class=\"col-md-8 col-md-offset-2\">\n  <div class=\"row\">\n\n  	<div class=\"title\">\n      <div>"
-    + escapeExpression(((stack1 = ((stack1 = depth0.params),stack1 == null || stack1 === false ? stack1 : stack1.station)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+  buffer += "\n\n\n<div class=\"col-md-8 col-md-offset-2\">\n  <div class=\"row\">\n\n  	<div class=\"title\">\n      <div>";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.removePavla || depth0.removePavla),stack1 ? stack1.call(depth0, ((stack1 = depth0.params),stack1 == null || stack1 === false ? stack1 : stack1.station), options) : helperMissing.call(depth0, "removePavla", ((stack1 = depth0.params),stack1 == null || stack1 === false ? stack1 : stack1.station), options)))
     + " ("
     + escapeExpression(((stack1 = ((stack1 = depth0.models),stack1 == null || stack1 === false ? stack1 : stack1.length)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + " Playlists)</div> \n      <span></span>\n    </div>\n    <div class=\"playlists-carousel\"> \n      ";

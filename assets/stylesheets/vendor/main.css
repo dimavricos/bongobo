@@ -199,14 +199,14 @@ input[type="radio"] {
 
 
   .hero-message{
-       font-size: 25px;
-    text-align: center;
-    margin-bottom: 35px;
-    border-bottom: 1px dashed #1C272C;
-    padding-bottom: 38px;
-  }
+   font-size: 25px;
+   text-align: center;
+   margin-bottom: 35px;
+   border-bottom: 1px dashed #1C272C;
+   padding-bottom: 38px;
+ }
 
-  .my-stations-container{
+ .my-stations-container{
    display: none;
    position: fixed;
    z-index: 999;
@@ -990,7 +990,7 @@ li.no-playlists{
 }
 
 .search button:hover{
-    background: #F7E1AE;
+  background: #F7E1AE;
 }
 
 
@@ -1382,16 +1382,16 @@ li.no-playlists{
 
 
 .add-to-favourites{
-position: absolute;
-    padding: 0px 27px;
-    cursor: pointer;
-    right: 155px;
-    top: 60px;
-    background: #D21717;
-    color: white;
-    border-radius: 43px;
-    padding-right: 0;
-    line-height: 14px;
+  position: absolute;
+  padding: 0px 27px;
+  cursor: pointer;
+  right: 155px;
+  top: 60px;
+  background: #D21717;
+  color: white;
+  border-radius: 43px;
+  padding-right: 0;
+  line-height: 14px;
 }
 
 .add-to-favourites:hover{
@@ -1404,14 +1404,14 @@ position: absolute;
 }
 
 .add-to-favourites i{
-    padding: 7px 1px;
-    background: #B52B2B;
-    display: inline-block;
-    margin-left: 10px;
-    border-radius: 100px;
-    height: 45px;
-    width: 45px;
-    vertical-align: super;
+  padding: 7px 1px;
+  background: #B52B2B;
+  display: inline-block;
+  margin-left: 10px;
+  border-radius: 100px;
+  height: 45px;
+  width: 45px;
+  vertical-align: super;
 }
 
 .add-to-favourites i img{
@@ -1576,14 +1576,14 @@ position: absolute;
 
 
 .close-popup{
-    position: absolute;
-    right: -43px;
-    top: 0;
-    background: #FFDA86;
-    padding: 8px 14px;
-    font-size: 19px;
-    cursor: pointer;
-    color: #2A3840;
+  position: absolute;
+  right: -43px;
+  top: 0;
+  background: #FFDA86;
+  padding: 8px 14px;
+  font-size: 19px;
+  cursor: pointer;
+  color: #2A3840;
 }
 
 .close-popup:hover{
@@ -1591,19 +1591,19 @@ position: absolute;
 }
 
 .my-search-results .close-search{
-    position: absolute;
-    background-color: #2A3840;
-    width: 40px;
-    font-size: 19px;
-    text-align: center;
-    color: #FFDA86;
-    padding-top: 9px;
-    /* border-radius: 100px; */
-    height: 40px;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
-    z-index: 9;
+  position: absolute;
+  background-color: #2A3840;
+  width: 40px;
+  font-size: 19px;
+  text-align: center;
+  color: #FFDA86;
+  padding-top: 9px;
+  /* border-radius: 100px; */
+  height: 40px;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 9;
 }
 
 .results-label{
@@ -1733,31 +1733,31 @@ position: absolute;
 }
 
 .genres .title{
-    float: left;
-    padding: 7px 18px 7px 46px;
-    position: relative;
-    top: 14.5px;
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 2px;
-    /* border-right: 1px solid; */
-    margin-left: 16px;
-    font-weight: 900;
+  float: left;
+  padding: 7px 18px 7px 46px;
+  position: relative;
+  top: 14.5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  /* border-right: 1px solid; */
+  margin-left: 16px;
+  font-weight: 900;
 }
 
- 
 
- 
- .genres .title span::after{
 
- }
 
 .genres .title span::after{
-    left: -150px;
-    background-size: 43px;
-    -ms-transform: rotate(-43deg);
-    -webkit-transform: rotate(-43deg);
-    transform: rotate(-43deg);
+
+}
+
+.genres .title span::after{
+  left: -150px;
+  background-size: 43px;
+  -ms-transform: rotate(-43deg);
+  -webkit-transform: rotate(-43deg);
+  transform: rotate(-43deg);
 }
 
 .title {
@@ -1904,306 +1904,310 @@ position: absolute;
     }
 
     .picked-station-name{
-     margin-top: 15px;
-     margin-left: 26px;
-     display: inline-block;
+      margin-top: 15px;
+      margin-left: 26px;
+      display: inline-block;
+      overflow: hidden;
+      width: 253px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .picked-station-station{
+      display: none;
+    }
+
+    .picked-playlist-name{
+      margin-top: 14px;
+      display: inline-block;
+      margin-left: 26px;
+
+    }
+
+    .pick-a-station ul li:first-of-type{
+      font-size: 12px;
+      text-align: center;
+      padding: 15px;
+      width: 100%;
+      margin: 0 auto;
+      letter-spacing: 2px;
+      background: white;
+      border: 0;
+      color: black;
+      font-weight: 600;
+    }
+
+    .pick-a-station ul li{
+      padding: 9px 20px;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 2px;
+      background-color: #2A3840;
+      color: rgb(255, 255, 255);
+      border-bottom: 1px solid rgb(27, 39, 45);
+      border-top: 1px solid rgb(53, 69, 77);
+      font-size: 13px;
+    }
+
+    .picked-playlist-id{
+      display: none;
+    }
+
+    .picked-playlist{
+      background: #FFDA86;
+      margin-bottom: 0;
+      padding: 10px 30px;
+      text-align: left;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      overflow: hidden;
+    }
+
+
+    .pick-a-station ul{
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      text-align: left;
+      max-height: 290px;
+      overflow-y: auto;
+    }
+
+    .small-message{
+      display: none;
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      text-align: center;
+      background-color: rgba(210, 210, 210, 0.9);
+      padding: 10px;
+      padding-top: 140px;
+    }
+
+    .small-message div{
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 22px;
+    }
+
+
+
+
+
+
+
+
+
+    .track:hover .actions{
+
+    }
+
+    .track .title{
+      display: inline-block;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 93%;
+      color: white;
+      font-size: 20px;
+      padding: 10px;
+    }
+
+    .track .duration{
+
+      font-size: 12px;
+      float: right;
+    }
+
+    .track .actions{
+      font-size: 18px; 
+
+
+    }
+    .track .actions span{
+      cursor: pointer;
+    }
+
+    .track .actions .add-btn{
+
+    }
+
+    .track .actions .play-btn{
+
+    }
+
+    .track .actions .drag-btn{
+
+    }
+
+    .hello-message {
+      color: rgb(19, 19, 19);
+      font-size: 14px;
+      margin-top: 0;
+      line-height: 411px;
+      background: #D2D2D2;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+
+    .second-message{
+      font-size: 25px;
+      margin-bottom: 35px;
+      display: block;
+      margin-top: 15px;
+    }
+
+    .hello-message i{
+     color: rgb(223, 223, 223);
+     font-size: 700%; 
    }
 
-   .picked-station-station{
-    display: none;
+
+
+
+
+
+
+
+
+
+
+   .active-playlist{
+    background: rgb(255, 255, 104);
+    color: rgb(37, 31, 31);
+
   }
 
-  .picked-playlist-name{
-    margin-top: 14px;
-    display: inline-block;
-    margin-left: 26px;
+  .active-track{
+
 
   }
 
-  .pick-a-station ul li:first-of-type{
-    font-size: 12px;
-    text-align: center;
-    padding: 15px;
+  .show{
+    position: relative;
+    display: inline-block!important;
+    width: 33%;
+    border-right: 15px solid #E8E8E8;
+    margin-bottom: 15px;
+  }
+
+  .show img{
     width: 100%;
-    margin: 0 auto;
-    letter-spacing: 2px;
-    background: white;
-    border: 0;
-    color: black;
-    font-weight: 600;
-  }
-
-  .pick-a-station ul li{
-    padding: 9px 20px;
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 2px;
-    background-color: #2A3840;
-    color: rgb(255, 255, 255);
-    border-bottom: 1px solid rgb(27, 39, 45);
-    border-top: 1px solid rgb(53, 69, 77);
-    font-size: 13px;
-  }
-
-  .picked-playlist-id{
-    display: none;
-  }
-
-  .picked-playlist{
-    background: #FFDA86;
-    margin-bottom: 0;
-    padding: 10px 30px;
-    text-align: left;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    overflow: hidden;
+    height: 113px;
   }
 
 
-  .pick-a-station ul{
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
-    text-align: left;
-    max-height: 290px;
-    overflow-y: auto;
-  }
-
-  .small-message{
-    display: none;
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    height: 100%;
+  .footer{
+    padding: 30px;
+    box-shadow: 0 30px 25px 25px black;
     text-align: center;
-    background-color: rgba(210, 210, 210, 0.9);
-    padding: 10px;
-    padding-top: 140px;
-  }
-
-  .small-message div{
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 22px;
-  }
-
-
-
-
-
-
-
-
-
-  .track:hover .actions{
-
-  }
-
-  .track .title{
-    display: inline-block;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 93%;
-    color: white;
-    font-size: 20px;
-    padding: 10px;
-  }
-
-  .track .duration{
-
-    font-size: 12px;
-    float: right;
-  }
-
-  .track .actions{
-    font-size: 18px; 
-
-
-  }
-  .track .actions span{
-    cursor: pointer;
-  }
-
-  .track .actions .add-btn{
-
-  }
-
-  .track .actions .play-btn{
-
-  }
-
-  .track .actions .drag-btn{
-
-  }
-
-  .hello-message {
-    color: rgb(19, 19, 19);
+    color: #CCCCCC;
     font-size: 14px;
-    margin-top: 0;
-    line-height: 411px;
-    background: #D2D2D2;
-    text-align: center;
-    letter-spacing: 2px;
   }
 
-  .second-message{
-    font-size: 25px;
-    margin-bottom: 35px;
-    display: block;
-    margin-top: 15px;
-  }
 
-  .hello-message i{
-   color: rgb(223, 223, 223);
-   font-size: 700%; 
- }
-
-
-
-
-
-
-
-
-
-
-
- .active-playlist{
-  background: rgb(255, 255, 104);
-  color: rgb(37, 31, 31);
-
-}
-
-.active-track{
-
-
-}
-
-.show{
-  position: relative;
-  display: inline-block!important;
-  width: 33%;
-  border-right: 15px solid #E8E8E8;
-  margin-bottom: 15px;
-}
-
-.show img{
-  width: 100%;
-  height: 113px;
-}
-
-
-.footer{
-  padding: 30px;
-  box-shadow: 0 30px 25px 25px black;
-  text-align: center;
-  color: #CCCCCC;
-  font-size: 14px;
-}
-
-
-.powered{
+  .powered{
     background: #FFDA86;
     text-align: center;
     padding: 20px 0 30px 0;
     margin-top: 50px;
-}
+  }
 
-.powered div{
-      text-transform: uppercase;
+  .powered div{
+    text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 11px;
     margin-bottom: 20px;
-}
+  }
 
-.powered img{
+  .powered img{
     width: 80px;
     margin: 0px 10px;
     opacity: 0.8;
-}
+  }
 
-.powered img:last-child{
-  width: 100px;
-}
+  .powered img:last-child{
+    width: 100px;
+  }
 
-.powered img:first-child{
-  width: 73px;
-}
-
-
+  .powered img:first-child{
+    width: 73px;
+  }
 
 
-.player-actions{
-  background: #2A3840;
-  width: 100%;
-  right: 0;
-  height: 55px;
-  color: whitesmoke;
-  float: left;
-}
-
-.controls{
-
-  float: left;
-  height: 55px;
-}
-
-.controls button{
-  background: transparent;
-  border: 0;
-  padding: 6px 25px;
-  border-right: 1px solid #000000;
-  color: #F0F0F0;
-  float: left;
-  margin-top: 11px;
-}
-
-button.track-play-pause , button.track-paused{
-  font-size: 30px;
-  margin-top: 5px;
-  border-right: 0;
-}
-
-button.next-track{
-  border-left:1px solid black;
-}
-
-button.volume{
-  border-right: 0px;
-  cursor: default;
-  position: relative;
-  margin-left: 15px;
-}
 
 
-.volume-mute-unmute{
-  overflow: hidden;
-  width: 30px;
-  position: absolute;
-  left: 0;
-  top: 7px;
-  cursor: pointer;
-  text-align: left;
-}
+  .player-actions{
+    background: #2A3840;
+    width: 100%;
+    right: 0;
+    height: 55px;
+    color: whitesmoke;
+    float: left;
+  }
+
+  .controls{
+
+    float: left;
+    height: 55px;
+  }
+
+  .controls button{
+    background: transparent;
+    border: 0;
+    padding: 6px 25px;
+    border-right: 1px solid #000000;
+    color: #F0F0F0;
+    float: left;
+    margin-top: 11px;
+  }
+
+  button.track-play-pause , button.track-paused{
+    font-size: 30px;
+    margin-top: 5px;
+    border-right: 0;
+  }
+
+  button.next-track{
+    border-left:1px solid black;
+  }
+
+  button.volume{
+    border-right: 0px;
+    cursor: default;
+    position: relative;
+    margin-left: 15px;
+  }
 
 
-.volume-mute-unmute i{
-  display: block;
-}
+  .volume-mute-unmute{
+    overflow: hidden;
+    width: 30px;
+    position: absolute;
+    left: 0;
+    top: 7px;
+    cursor: pointer;
+    text-align: left;
+  }
 
 
-button.volume span.volume-mute  i.fa-volume-off{
- display: none;
-}
+  .volume-mute-unmute i{
+    display: block;
+  }
 
-button.volume span.volume-mute:hover  i.fa-volume-off{
+
+  button.volume span.volume-mute  i.fa-volume-off{
+   display: none;
+ }
+
+ button.volume span.volume-mute:hover  i.fa-volume-off{
   display: block;
 }
 

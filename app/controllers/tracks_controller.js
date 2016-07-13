@@ -11,9 +11,16 @@ module.exports = {
 		this.app.fetch(spec, function(err, result) {
 
 			if (err) return callback(err);
-
-			var str = result.playlist_details.params.name
-			var name = str.split('-').join(' '); 
+			var str;
+			var name = result.playlist_details.params.name
+			if(typeof name !== "undefined"){
+				 
+				name = name.split('-').join(' '); 
+			}else{
+				name = "Bongobo | free internet radio with zero audio ads"
+			}
+			
+			
 			this.app.set('title',  name + ' | Bongobo');
 
 			callback(null, result);

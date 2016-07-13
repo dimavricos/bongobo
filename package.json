@@ -1,5 +1,5 @@
 {
-  "name": "bobgobo",
+  "name": "bongobo",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -35,4 +35,6 @@
   },
   "private": true
 }
+
+
 

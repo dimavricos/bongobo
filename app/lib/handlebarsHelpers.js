@@ -59,13 +59,23 @@
     return new Handlebars.SafeString(theString)
   },
 
+  trimAndPavla :  function(passedString) {
+    var theString = passedString.substring(passedString.indexOf(':') + 1).trim()
+    var newString = theString.split(' ').join('-')
+    return new Handlebars.SafeString(newString)
+  },
 
   removeSpace: function(text) {
     text = Handlebars.Utils.escapeExpression(text);
-    text = text.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g,' ');
-    text = text.split(' ').join('-');
+    text = text.replace(/[^A-Z0-9]+/ig, "-");
     return new Handlebars.SafeString(text);
-  }
+  },
+
+  removePavla : function(text) {
+    text = Handlebars.Utils.escapeExpression(text);
+    text = text.replace(/[^A-Z0-9]+/ig, " ");
+    return new Handlebars.SafeString(text);
+  },
 
 
   
