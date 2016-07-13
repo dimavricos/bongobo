@@ -13,7 +13,7 @@
       <div class="item">  
        {{#each this}}
        {{#noimage snippet.thumbnails.medium.url value="https://i.ytimg.com/vi/default.jpg"}}
-       <a href="/tracks?station={{../../../params.station}}&name={{removeSpace snippet.title}}&playlistId={{id.playlistId}}" class="show">
+       <a href="/tracks?station={{removeSpace ../../../params.station}}&name={{removeSpace snippet.title}}&playlistId={{id.playlistId}}" class="show">
         <div data-id="{{id.playlistId}}" class="image"> 
          <img src="{{snippet.thumbnails.medium.url}}" class="thumb"> 
          <div class="playlist-details"> 
