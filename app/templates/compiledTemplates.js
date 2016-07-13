@@ -8,7 +8,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  buffer += "<div class=\"home\">  \n	<div class=\"hero-message\">Welcome to <b>Bongobo</b> your new <u>free internet radio</u> with zero audio ads</div>\n	<div class=\"dark-bg\"> \n		";
+  buffer += "<div class=\"home\">  \n	<h1 class=\"hero-message\">Welcome to <b>Bongobo</b> your new <u>free internet radio</u> with zero audio ads</h1>\n	<div class=\"dark-bg\"> \n		";
   options = {hash:{
     'collection': (depth0.playlists)
   },data:data};
@@ -120,7 +120,7 @@ function program1(depth0,data) {
   if (stack1 = helpers.stationName) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.stationName; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)
-    + "  <img src=\"images/radio-icon.png\">\r\n        <span class=\"open\"><i class=\"fa fa-chevron-down\"></i></span>\r\n        <span class=\"count\">("
+    + "  <img src=\"images/radio-icon.png\" alt=\"{stationName}}\">\r\n        <span class=\"open\"><i class=\"fa fa-chevron-down\"></i></span>\r\n        <span class=\"count\">("
     + escapeExpression(((stack1 = ((stack1 = depth0.playlists),stack1 == null || stack1 === false ? stack1 : stack1.length)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + ") <span>playlists</span></span>  \r\n      </div> \r\n      <ul class=\"my-station-playlists\">\r\n       ";
   stack2 = helpers.each.call(depth0, depth0.playlists, {hash:{},inverse:self.program(4, program4, data),fn:self.program(2, program2, data),data:data});
@@ -141,6 +141,8 @@ function program2(depth0,data) {
   if (stack2 = helpers.image) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.image; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
+    + "\" alt=\""
+    + escapeExpression(((stack1 = depth0.name),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\">\r\n            <span>"
     + escapeExpression(((stack1 = depth0.name),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "</span>\r\n          </a>\r\n        </div> \r\n\r\n      </li>\r\n      ";
@@ -150,7 +152,7 @@ function program2(depth0,data) {
 function program4(depth0,data) {
   
   var buffer = "", stack1;
-  buffer += "\r\n      <li class='no-playlists' title=\"No playlists yet! Add songs to your playlist using the + icon\">\r\n        <b>No playlists yet!</b> \r\n        Add playlists to your station using the\r\n        <i><img src=\"images/radio-icon.png\"></i> button\r\n      </li>\r\n      "
+  buffer += "\r\n      <li class='no-playlists' title=\"No playlists yet! Add songs to your playlist using the + icon\">\r\n        <b>No playlists yet!</b> \r\n        Add playlists to your station using the\r\n        <i><img src=\"images/radio-icon.png\" alt=\"plus\"></i> button\r\n      </li>\r\n      "
     + escapeExpression(((stack1 = depth0.length),typeof stack1 === functionType ? stack1.apply(depth0) : stack1));
   return buffer;
   }
@@ -219,7 +221,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return " <button class=\"my-stations-open\">My Stations <img src=\"images/radio-icon.png\"></button> ";
+  return " <button class=\"my-stations-open\">My Stations <img src=\"images/radio-icon.png\" alt=\"radio\"></button> ";
   });
 
 templates["playlists/artists"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -308,9 +310,11 @@ function program3(depth0,data,depth3) {
     + escapeExpression(((stack1 = ((stack1 = depth0.id),stack1 == null || stack1 === false ? stack1 : stack1.playlistId)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\" class=\"image\"> \n         <img src=\""
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.thumbnails)),stack1 == null || stack1 === false ? stack1 : stack1.medium)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" class=\"thumb\"> \n         <div class=\"playlist-details\"> \n\n          <i class=\"fa fa-play-circle\"></i>\n        </div> \n\n      </div>\n      <span class=\"playlist-title\">"
+    + "\" class=\"thumb\" alt=\""
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.thumbnails)),stack1 == null || stack1 === false ? stack1 : stack1.medium)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\"> \n         <div class=\"playlist-details\"> \n\n          <i class=\"fa fa-play-circle\"></i>\n        </div> \n\n      </div>\n      <h3 class=\"playlist-title\">"
     + escapeExpression(((stack1 = ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.title)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</span> \n    </a>  \n    ";
+    + "</h3> \n    </a>  \n    ";
   return buffer;
   }
 
@@ -326,12 +330,12 @@ function program7(depth0,data) {
   return "\n<span class=\"no-results\">NO PLAYLISTS FOUND</span>\n";
   }
 
-  buffer += "\n\n\n<div class=\"col-md-8 col-md-offset-2\">\n  <div class=\"row\">\n\n  	<div class=\"title\">\n      <div>";
+  buffer += "\n\n\n<div class=\"col-md-8 col-md-offset-2\">\n  <div class=\"row\">\n\n  	<h2 class=\"title\">\n      <div>";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.removePavla || depth0.removePavla),stack1 ? stack1.call(depth0, ((stack1 = depth0.params),stack1 == null || stack1 === false ? stack1 : stack1.station), options) : helperMissing.call(depth0, "removePavla", ((stack1 = depth0.params),stack1 == null || stack1 === false ? stack1 : stack1.station), options)))
     + " ("
     + escapeExpression(((stack1 = ((stack1 = depth0.models),stack1 == null || stack1 === false ? stack1 : stack1.length)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + " Playlists)</div> \n      <span></span>\n    </div>\n    <div class=\"playlists-carousel\"> \n      ";
+    + " Playlists)</div> \n      <span></span>\n    </h2>\n    <div class=\"playlists-carousel\"> \n      ";
   options = {hash:{},inverse:self.noop,fn:self.programWithDepth(1, program1, data, depth0),data:data};
   stack2 = ((stack1 = helpers.grouped_each || depth0.grouped_each),stack1 ? stack1.call(depth0, 9, depth0.models, options) : helperMissing.call(depth0, "grouped_each", 9, depth0.models, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
