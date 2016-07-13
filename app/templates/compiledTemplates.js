@@ -306,7 +306,9 @@ function program3(depth0,data,depth3) {
   buffer += escapeExpression(((stack1 = helpers.removeSpace || depth0.removeSpace),stack1 ? stack1.call(depth0, ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.title), options) : helperMissing.call(depth0, "removeSpace", ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.title), options)))
     + "&playlistId="
     + escapeExpression(((stack1 = ((stack1 = depth0.id),stack1 == null || stack1 === false ? stack1 : stack1.playlistId)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" class=\"show\">\n        <div data-id=\""
+    + "\" class=\"show\" title=\""
+    + escapeExpression(((stack1 = ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.title)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\">\n        <div data-id=\""
     + escapeExpression(((stack1 = ((stack1 = depth0.id),stack1 == null || stack1 === false ? stack1 : stack1.playlistId)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\" class=\"image\"> \n         <img src=\""
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.thumbnails)),stack1 == null || stack1 === false ? stack1 : stack1.medium)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))

@@ -504,15 +504,18 @@ span.no-stations{
 }
 
 .my-station-playlists li a span{
-  color: black;
-  overflow: hidden;
-  margin-top: 10px;
-  font-size: 12px;
-  display: inline-block;
-  text-align: left;
-  margin-left: 10px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+    color: black;
+    overflow: hidden;
+    margin-top: 15px;
+    font-size: 12px;
+    display: inline-block;
+    text-align: left;
+    margin-left: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 376px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .my-station{
@@ -699,6 +702,10 @@ li.no-playlists{
   padding: 21px;
 
 
+}
+
+.playlist-details:hover i{
+      color: #ffda86;
 }
 
 .playlist-details i{

@@ -10,6 +10,8 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.logger());
 app.use(express.bodyParser());
 
+
+
 /**
  * In this simple example, the DataAdapter config, which specifies host, port, etc. of the API
  * to hit, is written inline. In a real world example, you would probably move this out to a
