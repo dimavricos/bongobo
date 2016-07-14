@@ -15,7 +15,7 @@ module.exports = {
 			if(typeof name !== "undefined"){ 
 				name = name.charAt(0).toUpperCase() + name.slice(1); 
 				name1 = name.split('-').join(' ')
-				this.app.set('title',  name1 + ' Playlists | Bongobo');
+				this.app.set('title',  name1 + ' Station | Bongobo');
 			}else{
 				 
 				this.app.set('title', "Bongobo | free internet radio with zero audio ads");

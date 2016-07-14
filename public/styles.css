@@ -8517,14 +8517,15 @@ input[type="radio"] {
 
 .logo::before{
   content: '';
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 66px 73px 0;
-  border-color: transparent #FFDA86 transparent transparent;
-  position: absolute;
-  left: -60px;
-  top: 0;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 50px 65px 0;
+    border-color: transparent #FFDA86 transparent transparent;
+    position: absolute;
+    left: -50px;
+    top: 0;
 }
 
 /*.logo::before{
@@ -8555,7 +8556,7 @@ input[type="radio"] {
     width: 100%;
     height: 100%;
     left: 0;
-    top: -5px;
+    top: 0px;
   }
 
   .loader img{
@@ -9179,10 +9180,25 @@ li.no-playlists{
   cursor: pointer;
 }
 
-.play-track:hover{
- color: #5EDE9D;
+.play-track.playing i{
+  color: #ffda86;
 }
 
+.play-track i{
+      display: block;
+    font-size: 30px;
+    opacity: 0.9;
+    cursor: pointer;
+    position: absolute;
+    right: 3px;
+    bottom: 45px;
+}
+
+.play-track:hover i{
+ color: #ffda86;
+}
+
+ 
 
 .track{
   background: rgb(42, 56, 64);
@@ -9388,13 +9404,13 @@ li.no-playlists{
 
 
 .search-for span{
-  padding: 18px 0px;
-  float: left;
-  color: #1B242A;
-  position: relative;
-  text-align: center;
-  font-weight: 500;
-  width: 15%;
+    padding: 17px 0px 16px 0;
+    float: left;
+    color: #1B242A;
+    position: relative;
+    text-align: center;
+    font-weight: 500;
+    width: 15%;
 }
 
 .no-results{
@@ -9891,7 +9907,7 @@ li.no-playlists{
   padding: 0;
   width: 100%;
   font-size: 13px;
-  margin-top: 10px;
+  margin-top: 0px;
   display: block;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -9945,7 +9961,7 @@ li.no-playlists{
   height: 23px;
   margin-bottom: 0;
   font-size: 16px;
-  margin-top: 10px;
+ 
 }
 
 
@@ -9971,14 +9987,14 @@ li.no-playlists{
   opacity: 0.9;
 }
 
-.my-search-results .close-search{
+.my-search-results .close-search , .my-search-results .close-player{
   position: absolute;
   background-color: #2A3840;
   width: 40px;
   font-size: 19px;
   text-align: center;
   color: #FFDA86;
-  padding-top: 9px;
+  padding-top: 5px;
   /* border-radius: 100px; */
   height: 40px;
   right: 10px;
@@ -9994,6 +10010,32 @@ li.no-playlists{
   font-size: 14px;
   letter-spacing: 2px;
   font-weight: 700;
+  color: #000;
+}
+
+.player-for-single-songs-container{
+ 
+    width: 100%;
+    height: 100%;
+    background: black;
+ margin-bottom: 20px;
+    display: none;
+}
+
+.player-popup{
+ 
+  width: 600px;
+  height: 300px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top:0;
+  margin: auto;
+}
+
+.player-for-single-songs{
+    width: 600px;
+  height: 300px;
 }
 
 .close-search:hover{
@@ -10027,7 +10069,6 @@ li.no-playlists{
 
 
 .header{
-  overflow: hidden;
   height: 66px;
   width: 100%;
   line-height: 33px;

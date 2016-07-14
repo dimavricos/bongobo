@@ -363,16 +363,20 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"search-column\">\n <div class=\"open-search\">\n  <i class=\"fa fa-arrow-left\"></i>\n</div>\n<div class=\"my-search-results\">\n  <section>  \n    <div  class=\"tracks-container\">\n      <div class=\"close-search \"><i class=\"fa fa-times\"></i></div>\n      <span class=\"results-label\">SEARCH RESULTS FOR:</span>  \n      <div id=\"search-results\"></div>   \n      <div class=\"loader\"><img src=\"images/ajax-loader.gif\"></div>\n    </div> \n    <div  class=\"playlist-container\"> \n      <div class=\"close-search \"><i class=\"fa fa-times\"></i></div>\n      <span class=\"results-label\">SEARCH RESULTS FOR:</span>  \n      <div id=\"playlists\"></div>   \n      <div class=\"loader\"><img src=\"images/ajax-loader.gif\"></div>\n    </div>   \n  </section>\n</div> \n</div>";
+  return "<div class=\"search-column\">\n <div class=\"open-search\">\n  <i class=\"fa fa-arrow-left\"></i>\n</div>\n<div class=\"my-search-results\">\n  <section>  \n    <div  class=\"tracks-container\">\n      <div class=\"close-search \"><i class=\"fa fa-times\"></i></div>\n      \n      <div id=\"search-results\"></div>   \n      <div class=\"loader\"><img src=\"images/ajax-loader.gif\"></div>\n    </div> \n    <div  class=\"playlist-container\"> \n      <div class=\"close-search \"><i class=\"fa fa-times\"></i></div>\n      <span class=\"results-label\">SEARCH RESULTS FOR:</span>  \n      <div id=\"playlists\"></div>   \n      <div class=\"loader\"><img src=\"images/ajax-loader.gif\"></div>\n    </div>   \n  </section>\n</div> \n</div>";
   });
 
 templates["search/tracks_playlists"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
+  var buffer = "", stack1, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  return "		<div class=\"search-for\">  \r\n			<span class=\"light-bg\">Search for</span>\r\n\r\n			<div class=\"search-options\">\r\n				<ul>\r\n					<li data-id=\"music\" class=\"active\">Playlist</li>\r\n					<li data-id=\"song\" >Track</li>  \r\n				</ul>\r\n			</div> \r\n\r\n			<div class=\"search\">\r\n				<div> \r\n					<div class=\"search-for-playlists-container\">\r\n						<form class=\"search-for-playlists\" > \r\n							<input  type=\"text\" placeholder=\"Type the playlist you want to find\">\r\n							<button type=\"submit\"><i class=\"fa fa-search\"></i> Search</button>\r\n						</form> \r\n					</div> \r\n\r\n					<div class=\"search-for-tracks-container\">\r\n						<form class=\"search-for-tracks\" > \r\n							<input  type=\"text\" placeholder=\"Type the track you want to find\">\r\n							<button type=\"submit\"><i class=\"fa fa-search\"></i> Search</button>\r\n						</form> \r\n					</div> \r\n\r\n				 \r\n					\r\n				</div> \r\n			</div> \r\n\r\n		</div> \r\n\r\n\r\n";
+  buffer += "		\r\n\r\n		<div class=\"search-for\">  \r\n			<span class=\"light-bg\">Search for</span>\r\n\r\n			<div class=\"search-options\">\r\n				<ul>\r\n					<li data-id=\"music\" class=\"active\">Playlist</li>\r\n					<li data-id=\"song\" >Track</li>  \r\n				</ul>\r\n			</div> \r\n\r\n			<div class=\"search\">\r\n				<div> \r\n					<div class=\"search-for-playlists-container\">\r\n						<form class=\"search-for-playlists\" > \r\n							<input  type=\"text\" placeholder=\"Type the playlist you want to find\">\r\n							<button type=\"submit\"><i class=\"fa fa-search\"></i> Search</button>\r\n						</form> \r\n					</div> \r\n\r\n					<div class=\"search-for-tracks-container\">\r\n						<form class=\"search-for-tracks\" > \r\n							<input  type=\"text\" placeholder=\"Type the track you want to find\">\r\n							<button type=\"submit\"><i class=\"fa fa-search\"></i> Search</button>\r\n						</form> \r\n					</div> \r\n\r\n				 \r\n					\r\n				</div> \r\n			</div> \r\n\r\n		</div> \r\n\r\n";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "search/index", options) : helperMissing.call(depth0, "view", "search/index", options)))
+    + "\r\n";
+  return buffer;
   });
 
 templates["tracks/index"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -432,22 +436,24 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1;
-  buffer += " \r\n    <li>  \r\n      <a href=\"\">\r\n         <img src=\""
+  buffer += " \r\n    <li>  \r\n      <div class=\"play-track\" data-id=\""
+    + escapeExpression(((stack1 = ((stack1 = depth0.id),stack1 == null || stack1 === false ? stack1 : stack1.videoId)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\">\r\n\r\n        <img src=\""
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.thumbnails)),stack1 == null || stack1 === false ? stack1 : stack1.high)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\r\n        <span>"
+    + "\">\r\n\r\n        <i class=\"fa fa-play-circle\"></i>\r\n\r\n        <span>"
     + escapeExpression(((stack1 = ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.title)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + " </span>\r\n      </a> \r\n   </li>\r\n\r\n\r\n   ";
+    + " </span>\r\n      </div> \r\n    </li>\r\n\r\n\r\n    ";
   return buffer;
   }
 
-  buffer += " \r\n\r\n    \r\n  <div class=\"title\">\r\n    <div>"
+  buffer += "\r\n<DIV class=\"player-for-single-songs-container\">\r\n  <div class=\"player-popup\">\r\n   <div class=\"close-player \"><i class=\"fa fa-times\"></i></div>\r\n   <div class=\"player-for-single-songs\"></div> \r\n </div>  \r\n</DIV>\r\n\r\n<span class=\"results-label\">SEARCH RESULTS FOR:</span>  \r\n<div class=\"title\">\r\n  <div>"
     + escapeExpression(((stack1 = ((stack1 = depth0.params),stack1 == null || stack1 === false ? stack1 : stack1.value)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + " ("
     + escapeExpression(((stack1 = ((stack1 = depth0.models),stack1 == null || stack1 === false ? stack1 : stack1.length)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + " TRACKS)</div>\r\n  </div>\r\n \r\n<div class=\"container\">\r\n  <ul class=\"my-playlist-tracks\">\r\n    ";
+    + " TRACKS)</div>\r\n</div>\r\n\r\n\r\n\r\n<div class=\"container\">\r\n  <ul class=\"my-playlist-tracks\">\r\n    ";
   stack2 = helpers.each.call(depth0, depth0.models, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += "\r\n </ul>\r\n</div>\r\n\r\n\r\n";
+  buffer += "\r\n  </ul>\r\n</div>\r\n\r\n\r\n";
   return buffer;
   });
 

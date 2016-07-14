@@ -21,7 +21,7 @@ module.exports = {
 			}
 			
 			
-			this.app.set('title',  name + ' | Bongobo');
+			this.app.set('title',  name + ' Playlist | Bongobo');
 
 			callback(null, result);
 		}.bind(this));

@@ -1,23 +1,35 @@
- 
 
-    
-  <div class="title">
-    <div>{{this.params.value}} ({{models.length}} TRACKS)</div>
-  </div>
- 
+<DIV class="player-for-single-songs-container">
+  <div class="player-popup">
+   <div class="close-player "><i class="fa fa-times"></i></div>
+   <div class="player-for-single-songs"></div> 
+ </div>  
+</DIV>
+
+<span class="results-label">SEARCH RESULTS FOR:</span>  
+<div class="title">
+  <div>{{this.params.value}} ({{models.length}} TRACKS)</div>
+</div>
+
+
+
 <div class="container">
   <ul class="my-playlist-tracks">
     {{#each models}} 
     <li>  
-      <a href="">
-         <img src="{{snippet.thumbnails.high.url}}">
+      <div class="play-track" data-id="{{id.videoId}}">
+
+        <img src="{{snippet.thumbnails.high.url}}">
+
+        <i class="fa fa-play-circle"></i>
+
         <span>{{snippet.title}} </span>
-      </a> 
-   </li>
+      </div> 
+    </li>
 
 
-   {{/each}}
- </ul>
+    {{/each}}
+  </ul>
 </div>
 
 
