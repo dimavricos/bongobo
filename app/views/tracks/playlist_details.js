@@ -35,10 +35,12 @@ module.exports = BaseView.extend({
 	}, 
 
 
-	facebookShare : function(){
+	facebookShare : function(e){
+		e.preventDefault()
 		FB.ui({
 			method: 'feed',
 			link: document.URL,
+			picture : $('.playlist-image img').attr('src'),
 		}, function (response) {
 		});
 	},
@@ -77,7 +79,7 @@ module.exports = BaseView.extend({
 		',top=' + top +
 		',left=' + left;
 
-		window.open(url, '', opts);
+		window.open(url, 'google', opts);
 
 		return false;
 	}
