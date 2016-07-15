@@ -45,6 +45,7 @@ module.exports = BaseView.extend({
 			picture : $('.playlist-image img').attr('src'),
 		}, function (response) {
 		});
+		return false
 	},
 
 	twitterShare : function(e){

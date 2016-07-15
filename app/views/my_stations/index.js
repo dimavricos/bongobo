@@ -143,7 +143,7 @@ module.exports = BaseView.extend({
 			if(newModel == undefined){
 				that.myStations.add(that.myStation); 
 				that.myStation.save()
-				alert('new playlist created')
+				alert('new station created')
 
 				my_stations_view.render().$el 
 				$('.my-stations-container').show()
@@ -153,7 +153,7 @@ module.exports = BaseView.extend({
 			}
 
 		}
-		console.log('PLAYLISTS' , that.myStations)
+	 
 
 	},
 
@@ -186,7 +186,6 @@ module.exports = BaseView.extend({
 			var playlists = $(this).context.children
 			var station_id = $(this).context.attributes[1].value
 			var find_station =   that.myStations.find(function(model) { return model.get('id') ==  station_id; });
-			console.log( 'wds', $(this).context.attributes ,find_station)
 			$.each( playlists , function( index, value ) {
 				ids =  {
 					id : $(value).find("span.remove-playlist").data("id")  ,
@@ -253,7 +252,7 @@ module.exports = BaseView.extend({
 
   	choose_station : function(e){
   		if(this.myStations.length == 0){
-  			alert("Create a playlist first")
+  			alert("Create a station first")
   			$('.my-stations-container').fadeIn()
   		}else{
   			$('.pick-a-station-container').show()
@@ -282,14 +281,11 @@ module.exports = BaseView.extend({
   			var playlistImage = $('.picked-station-image').attr('src')
   			var playlistStation = $('.picked-station-station').html()
   			var newModel = this.myStations.findWhere({ stationId: checked_station });
-  			console.log('aaaaaaaaaaaaa' , newModel)
   			that.playlists = newModel.attributes.playlists
   			that.playlists.unshift( { id : playlistId, name : playlistName  , image : playlistImage , station : playlistStation}  ) 
-
-  			console.log('playlists added' , that.playlists)
   			newModel.set({'playlists' : that.playlists}) 
   			newModel.save()
-  			alert('  playlist updated') 
+  			alert('  station updated') 
   			my_stations_view.render().$el 
   			$('.my-stations-container').show()
   		}

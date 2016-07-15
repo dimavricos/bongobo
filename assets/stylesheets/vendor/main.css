@@ -915,9 +915,9 @@ li.no-playlists{
 }
 
 
-.track-play-pause:hover{
+.track-play-pause:hover , .play-custom:hover{
   cursor: pointer;
-  color:#F0F0F0;
+  color:#ffda86;
 }
 
 .playlist-tracks li.active-track .track-play-pause{
@@ -1353,6 +1353,10 @@ li.no-playlists{
   color: white;
 }
 
+.share-playlist a:hover{
+  opacity: 0.7
+}
+
 .share-playlist a.fb{
   background: #3b5998;
 }
@@ -1510,8 +1514,11 @@ li.no-playlists{
 }
 
 .share div:hover{
-  color: white;
+  cursor: pointer;
+  color: #ffda86;
 }
+
+ 
 
 .home{
 
@@ -2147,6 +2154,10 @@ h2.title{
   .active-track{
 
 
+  }
+
+  .active-track .play-custom{
+    display: none;
   }
 
   .show{

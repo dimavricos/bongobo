@@ -507,7 +507,9 @@ function program1(depth0,data) {
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.resourceId)),stack1 == null || stack1 === false ? stack1 : stack1.videoId)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\" data-name=\""
     + escapeExpression(((stack1 = ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.title)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" title=\"add to playlist\">\n                    <i class=\"fa fa-plus-circle\"></i>\n                </span>  -->\n            </div>   \n        </li>\n\n\n        ";
+    + "\" title=\"add to playlist\">\n                    <i class=\"fa fa-plus-circle\"></i>\n                </span>  -->\n                <span class=\"play-custom\" data-id=\""
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.resourceId)),stack1 == null || stack1 === false ? stack1 : stack1.videoId)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\" title=\"play\"> \n                        <i class=\"fa fa-play\"></i>\n                    </span> \n            </div>   \n        </li>\n\n\n        ";
   return buffer;
   }
 

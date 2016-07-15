@@ -3,10 +3,11 @@ var Backbone = require('backbone');
 module.exports = BaseView.extend({
 
 
-
+youtube_id : null,
 
  events : { 
   'click .play-track' : 'play_track',
+  'click .play-custom' : 'play_track',
   "click .track-playing" : 'track_playing',
   "click .track-paused" : 'track_paused' ,
   "click .track-seek-bar" : 'track_seek',
@@ -16,7 +17,10 @@ module.exports = BaseView.extend({
   'click .volume-mute' : 'volume_mute',
   "click .volume-unmute" : 'volume_unmute',
   "click .expand-video" : 'expand_video',
-  "click .minimize-video" : 'minimize_video'
+  "click .minimize-video" : 'minimize_video',
+  "click .facebook" : 'share_facebook',
+  "click .twitter" : 'share_twitter',
+  "click .google-plus" : 'share_google',
 },
 
 youTubeFrequency : 100 ,
@@ -93,6 +97,7 @@ play_track : function(e){
   var height = $('.playlist-tracks li').height()
   api.scrollTo( 0 ,   target_offset*52  , 1000);
 
+  that.youtube_id = id
 },
 
 track_playing : function(e){ 
@@ -211,7 +216,24 @@ expand_video : function(){
 
 minimize_video : function(){
   $('#player').removeClass('maximized')
-}
+},
+
+share_facebook: function(){
+e.preventDefault()
+    FB.ui({
+      method: 'feed',
+      link: "https://www.youtube.com/watch?v="+that.youtube_id,
+    }, function (response) {
+    });
+},
+
+share_twitter: function(){
+
+},
+
+share_google: function(){
+
+},
 
 
 });
