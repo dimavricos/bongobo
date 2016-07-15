@@ -3,38 +3,54 @@ var Backbone = require('backbone');
 module.exports = BaseView.extend({
 
 
-youtube_id : null,
+  youtube_id : null,
 
- events : { 
-  'click .play-track' : 'play_track',
-  'click .play-custom' : 'play_track',
-  "click .track-playing" : 'track_playing',
-  "click .track-paused" : 'track_paused' ,
-  "click .track-seek-bar" : 'track_seek',
-  "click .next-track" : 'track_next', 
-  "click .prev-track" : 'track_prev', 
-  "click .volume-bar" : 'volume_adjust',
-  'click .volume-mute' : 'volume_mute',
-  "click .volume-unmute" : 'volume_unmute',
-  "click .expand-video" : 'expand_video',
-  "click .minimize-video" : 'minimize_video',
-  "click .facebook" : 'share_facebook',
-  "click .twitter" : 'share_twitter',
-  "click .google-plus" : 'share_google',
-},
+  events : { 
+    'click .play-track' : 'play_track',
+    'click .play-custom' : 'play_track',
+    "click .track-playing" : 'track_playing',
+    "click .track-paused" : 'track_paused' ,
+    "click .track-seek-bar" : 'track_seek',
+    "click .next-track" : 'track_next', 
+    "click .prev-track" : 'track_prev', 
+    "click .volume-bar" : 'volume_adjust',
+    'click .volume-mute' : 'volume_mute',
+    "click .volume-unmute" : 'volume_unmute',
+    "click .expand-video" : 'expand_video',
+    "click .minimize-video" : 'minimize_video',
+    "click .facebook" : 'share_facebook',
+    "click .twitter" : 'share_twitter',
+    "click .google-plus" : 'share_google',
+  },
 
-youTubeFrequency : 100 ,
-youTubeInterval : 0 ,
-pane : null,
+  youTubeFrequency : 100 ,
+  youTubeInterval : 0 ,
+  pane : null,
 
-postRender: function() {
-  var that = this
-  require('youtube'); 
-  require('scrollPane'); 
-  require('mouseWheel');
-  $('.playilist-length span').html(this.collection.length)
+  postRender: function() {
+    var that = this
+    require('youtube'); 
+    require('scrollPane'); 
+    require('mouseWheel');
+    $('.playilist-length span').html(this.collection.length)
 
-  $("#player").tubeplayer({
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1716307738621101',
+        xfbml      : true,
+        version    : 'v2.6'
+      });
+    };
+
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    $("#player").tubeplayer({
     width: '100%', // the width of the player
     height: '100%', // the height of the player
     allowFullScreen: false, // true by default, allow user to go full screen
@@ -219,13 +235,13 @@ minimize_video : function(){
 },
 
 share_facebook: function(e){
-
-    FB.ui({
-      method: 'feed',
-      link: "https://www.youtube.com/watch?v="+that.youtube_id,
-    }, function (response) {
-    });
-    return false
+var that = this
+  FB.ui({
+    method: 'feed',
+    link: "https://www.youtube.com/watch?v="+that.youtube_id,
+  }, function (response) {
+  });
+  return false
 },
 
 share_twitter: function(){
