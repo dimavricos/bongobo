@@ -116,6 +116,11 @@ module.exports = function(grunt) {
           exports: '$'
         },
 
+        nprogress: {
+          path: 'assets/vendor/plugins/nprogress.js',
+          exports: '$'
+        },
+
         localStorage: {
           path: 'assets/vendor/plugins/backbone.localStorage.js',
           exports: '$'

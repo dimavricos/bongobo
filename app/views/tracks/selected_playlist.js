@@ -114,6 +114,8 @@ play_track : function(e){
   api.scrollTo( 0 ,   target_offset*52  , 1000);
 
   that.youtube_id = id
+  $(".google").attr('href', 'https://plus.google.com/share?url=https://www.youtube.com/watch?v=' + that.youtube_id);
+  $(".twitter").attr('href', 'http://twitter.com/share?url=https://www.youtube.com/watch?v=' + that.youtube_id);
 },
 
 track_playing : function(e){ 
@@ -245,11 +247,39 @@ var that = this
 },
 
 share_twitter: function(){
+var width = 575,
+    height = 400,
+    left = ($(window).width() - width) / 2,
+    top = ($(window).height() - height) / 2,
+    url = "https://www.youtube.com/watch?v="+that.youtube_id,
+    opts = 'status=1' +
+    ',width=' + width +
+    ',height=' + height +
+    ',top=' + top +
+    ',left=' + left;
 
+    window.open(url, 'twitter', opts);
+
+    return false;
 },
 
-share_google: function(){
+share_google: function(e){
+var width = 600,
+    height = 600,
+    left = ($(window).width() - width) / 2,
+    top = ($(window).height() - height) / 2,
+    url = $(e.currentTarget).attr('href'),
+    opts = 'status=1' +
+    ',menu-bar=no' +
+    ',toolbar=no,resizable=yes,scrollbars=yes' +
+    ',width=' + width +
+    ',height=' + height +
+    ',top=' + top +
+    ',left=' + left;
 
+    window.open(url, 'google', opts);
+
+    return false;
 },
 
 
