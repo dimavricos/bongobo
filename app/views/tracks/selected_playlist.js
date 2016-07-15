@@ -218,13 +218,14 @@ minimize_video : function(){
   $('#player').removeClass('maximized')
 },
 
-share_facebook: function(){
-e.preventDefault()
+share_facebook: function(e){
+
     FB.ui({
       method: 'feed',
       link: "https://www.youtube.com/watch?v="+that.youtube_id,
     }, function (response) {
     });
+    return false
 },
 
 share_twitter: function(){
