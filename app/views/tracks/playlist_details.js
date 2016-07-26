@@ -68,23 +68,23 @@ module.exports = BaseView.extend({
 
 
 	googleShare : function(){
-		
-		var width = 600,
-		height = 600,
-		left = ($(window).width() - width) / 2,
-		top = ($(window).height() - height) / 2,
-		url = $(e.currentTarget).attr('href'),
-		opts = 'status=1' +
-		',menu-bar=no' +
-		',toolbar=no,resizable=yes,scrollbars=yes' +
-		',width=' + width +
-		',height=' + height +
-		',top=' + top +
-		',left=' + left;
+  var that = this
+  var width = 600,
+  height = 600,
+  left = ($(window).width() - width) / 2,
+  top = ($(window).height() - height) / 2,
+  url = "https://plus.google.com/share?url="+window.location.href,
+  opts = 'status=1' +
+  ',menu-bar=no' +
+  ',toolbar=no,resizable=yes,scrollbars=yes' +
+  ',width=' + width +
+  ',height=' + height +
+  ',top=' + top +
+  ',left=' + left;
 
-		window.open(url, 'google', opts);
+  window.open(url, 'google', opts);
 
-		return false;
+  return false;
 	}
 
 	

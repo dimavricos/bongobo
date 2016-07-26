@@ -252,7 +252,7 @@ share_twitter: function(){
   height = 400,
   left = ($(window).width() - width) / 2,
   top = ($(window).height() - height) / 2,
-  url = "https://www.youtube.com/watch?v="+that.youtube_id,
+  url = "http://twitter.com/share?url=https://www.youtube.com/watch?v="+that.youtube_id,
   opts = 'status=1' +
   ',width=' + width +
   ',height=' + height +
@@ -265,11 +265,12 @@ share_twitter: function(){
 },
 
 share_google: function(e){
+  var that = this
   var width = 600,
   height = 600,
   left = ($(window).width() - width) / 2,
   top = ($(window).height() - height) / 2,
-  url = $(e.currentTarget).attr('href'),
+  url = "https://plus.google.com/share?url=https://www.youtube.com/watch?v="+that.youtube_id,
   opts = 'status=1' +
   ',menu-bar=no' +
   ',toolbar=no,resizable=yes,scrollbars=yes' +
