@@ -1,52 +1,52 @@
-<!-- <div class="img-bg">
-    <img src="{{models.0.snippet.thumbnails.high.url}}">
-    <img src="{{models.2.snippet.thumbnails.high.url}}">
-    <img src="{{models.3.snippet.thumbnails.high.url}}">
-    <img src="{{models.4.snippet.thumbnails.high.url}}">
-    <img src="{{models.5.snippet.thumbnails.high.url}}">
-    <img src="{{models.6.snippet.thumbnails.high.url}}">
-    <img src="{{models.7.snippet.thumbnails.high.url}}">
-    <img src="{{models.8.snippet.thumbnails.high.url}}">
-</div> -->
-{{view "youtube_player"}} 
-<div class="col-md-6"> 
-    <div class="row">
-        <div id="youtube-playlist"> 
-            <ul class="playlist-tracks">
-                {{#each models}} 
-                <li class="light-bg" data-track="{{snippet.resourceId.videoId}}"> 
-                    <div class="col-md-9 track-name">
-                      <span>{{math @index "+" 1}}</span> {{snippet.title}}
-                  </div> 
-                  <div class="col-md-2">
-                    <span class="musicbar bg-success bg-empty animate"> 
-                        <span class="bar1 a3 lter"></span> 
-                        <span class="bar2 a5 lt"></span> 
-                        <span class="bar3 a1 bg"></span> 
-                        <span class="bar4 a4 dk"></span> 
-                        <span class="bar5 a2 dker"></span> 
-                    </span>
-                </div>
-                <div class="col-md-1 track-actions"> 
-                    <span class="play-track" data-id="{{snippet.resourceId.videoId}}" title="play"> 
-                        <i class="fa fa-play"></i>
-                    </span> 
-                    <span class="track-play-pause " title="pause/play">
+  <div class="img-bg">
+      <img src="{{models.0.snippet.thumbnails.high.url}}">
+      <img src="{{models.2.snippet.thumbnails.high.url}}">
+      <img src="{{models.3.snippet.thumbnails.high.url}}">
+      <img src="{{models.4.snippet.thumbnails.high.url}}">
+      <img src="{{models.5.snippet.thumbnails.high.url}}">
+      <img src="{{models.6.snippet.thumbnails.high.url}}">
+      <img src="{{models.7.snippet.thumbnails.high.url}}">
+      <img src="{{models.8.snippet.thumbnails.high.url}}">
+  </div>  
+  {{view "youtube_player"}} 
+  <div class="col-md-6"> 
+      <div class="row">
+          <div id="youtube-playlist"> 
+              <ul class="playlist-tracks">
+                  {{#each models}} 
+                  <li class="light-bg" data-track="{{snippet.resourceId.videoId}}"> 
+                      <div class="col-md-9 track-name">
+                          <span>{{math @index "+" 1}}</span> {{snippet.title}}
+                      </div> 
+                      <div class="col-md-2">
+                          <span class="musicbar bg-success bg-empty animate"> 
+                              <span class="bar1 a3 lter"></span> 
+                              <span class="bar2 a5 lt"></span> 
+                              <span class="bar3 a1 bg"></span> 
+                              <span class="bar4 a4 dk"></span> 
+                              <span class="bar5 a2 dker"></span> 
+                          </span>
+                      </div>
+                      <div class="col-md-1 track-actions"> 
+                          <span class="play-track" data-id="{{snippet.resourceId.videoId}}" title="play"> 
+                              <i class="fa fa-play"></i>
+                          </span> 
+                          <span class="track-play-pause " title="pause/play">
 
-                        <i class="fa fa-pause"></i>
-                    </span> 
-           <!--      <span class="add-btn" data-id="{{snippet.resourceId.videoId}}" data-name="{{snippet.title}}" title="add to playlist">
-                    <i class="fa fa-plus-circle"></i>
-                </span>  -->
-                <span class="play-custom" data-id="{{snippet.resourceId.videoId}}" title="play"> 
-                        <i class="fa fa-play"></i>
-                    </span> 
-            </div>   
-        </li>
+                              <i class="fa fa-pause"></i>
+                          </span> 
+  <!--      <span class="add-btn" data-id="{{snippet.resourceId.videoId}}" data-name="{{snippet.title}}" title="add to playlist">
+  <i class="fa fa-plus-circle"></i>
+</span>  -->
+<span class="play-custom" data-id="{{snippet.resourceId.videoId}}" title="play"> 
+  <i class="fa fa-play"></i>
+</span> 
+</div>   
+</li>
 
 
-        {{/each}}
-    </ul>
+{{/each}}
+</ul>
 </div>
 </div> 
 </div>
