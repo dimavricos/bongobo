@@ -26,7 +26,7 @@ module.exports = BaseView.extend({
         margin:10,
         navigation: true,
         navigationText : '',
-
+        itemsDesktop : [1000,5], //5 items between 1000px and 901px
       });
     }
 
