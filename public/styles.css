@@ -8393,7 +8393,9 @@ body{
 
 
 
-
+.mobile{
+  display: none;
+}
 
 p{
   font-size: 20px;
@@ -11276,7 +11278,7 @@ div.track-play-bar {
 }
 
 #nprogress .bar {
-  background: #ffda86;
+  background: #30414A;
 
   position: fixed;
   z-index: 1031;
@@ -11342,6 +11344,53 @@ div.track-play-bar {
 @keyframes nprogress-spinner {
   0%   { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 0)
+and (max-width : 1024px) {
+  /* STYLES GO HERE */
+  .desktop{
+    display: none;
+  }
+
+  .mobile{
+    display: block;
+    position: fixed;
+    background: #FFDA86;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .mobile img{
+    margin: 40px auto;
+    display: block;
+  }
+
+
+  .mobile span{
+    text-align: center;
+    display: block;
+    font-size: 15px;
+    padding: 30px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 31px;
+    border-top: 1px dashed;
+    margin: 0 60px;
+  }
+
+}
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) {
+/* Styles */
+  
+ 
+
 }
 /* 
  *  Core Owl Carousel CSS File

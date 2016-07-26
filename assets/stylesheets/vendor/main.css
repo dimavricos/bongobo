@@ -21,7 +21,9 @@ body{
 
 
 
-
+.mobile{
+  display: none;
+}
 
 p{
   font-size: 20px;
@@ -2904,7 +2906,7 @@ div.track-play-bar {
 }
 
 #nprogress .bar {
-  background: #ffda86;
+  background: #30414A;
 
   position: fixed;
   z-index: 1031;

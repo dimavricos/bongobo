@@ -237,7 +237,7 @@ minimize_video : function(){
 },
 
 share_facebook: function(e){
-var that = this
+  var that = this
   FB.ui({
     method: 'feed',
     link: "https://www.youtube.com/watch?v="+that.youtube_id,
@@ -247,39 +247,40 @@ var that = this
 },
 
 share_twitter: function(){
-var width = 575,
-    height = 400,
-    left = ($(window).width() - width) / 2,
-    top = ($(window).height() - height) / 2,
-    url = "https://www.youtube.com/watch?v="+that.youtube_id,
-    opts = 'status=1' +
-    ',width=' + width +
-    ',height=' + height +
-    ',top=' + top +
-    ',left=' + left;
+  var that = this
+  var width = 575,
+  height = 400,
+  left = ($(window).width() - width) / 2,
+  top = ($(window).height() - height) / 2,
+  url = "https://www.youtube.com/watch?v="+that.youtube_id,
+  opts = 'status=1' +
+  ',width=' + width +
+  ',height=' + height +
+  ',top=' + top +
+  ',left=' + left;
 
-    window.open(url, 'twitter', opts);
+  window.open(url, 'twitter', opts);
 
-    return false;
+  return false;
 },
 
 share_google: function(e){
-var width = 600,
-    height = 600,
-    left = ($(window).width() - width) / 2,
-    top = ($(window).height() - height) / 2,
-    url = $(e.currentTarget).attr('href'),
-    opts = 'status=1' +
-    ',menu-bar=no' +
-    ',toolbar=no,resizable=yes,scrollbars=yes' +
-    ',width=' + width +
-    ',height=' + height +
-    ',top=' + top +
-    ',left=' + left;
+  var width = 600,
+  height = 600,
+  left = ($(window).width() - width) / 2,
+  top = ($(window).height() - height) / 2,
+  url = $(e.currentTarget).attr('href'),
+  opts = 'status=1' +
+  ',menu-bar=no' +
+  ',toolbar=no,resizable=yes,scrollbars=yes' +
+  ',width=' + width +
+  ',height=' + height +
+  ',top=' + top +
+  ',left=' + left;
 
-    window.open(url, 'google', opts);
+  window.open(url, 'google', opts);
 
-    return false;
+  return false;
 },
 
 

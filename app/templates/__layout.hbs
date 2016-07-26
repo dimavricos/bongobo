@@ -4,6 +4,7 @@
 <head>
   <title>{{appData.title}}</title>
   <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="description" content="Bongobo is a free internet radio with million of playlists. Here you can search and find your favourite music!">
   <link rel="icon" href="images/favicon.ico"> 
   <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,700' rel='stylesheet' type='text/css'>
@@ -22,51 +23,51 @@
 </head>
 
 <body> 
+  <div class="desktop">
+
+    {{view "my_stations/index"}}
 
 
-  {{view "my_stations/index"}}
-  
 
 
-
-  <div class="dark-bg header"> 
-    <div class="container">
-     <div class="col-md-1">
-      <div class="row logo">
-        <div><a href="http://www.bongobo.com/"><img src="images/logo.png" alt="bongobo"></a></div> 
+    <div class="dark-bg header"> 
+      <div class="container">
+       <div class="col-md-1">
+        <div class="row logo">
+          <div><a href="http://www.bongobo.com/"><img src="images/logo.png" alt="bongobo"></a></div> 
+        </div>
       </div>
-    </div>
-    
-    <div class="col-md-9 search-container"> 
-      <div class="row">{{view "search/tracks_playlists"}}</div>  
-    </div> 
-    <div class="col-md-2">
-      <div class="row">
-       {{view "my_stations/open_my_stations"}}
+
+      <div class="col-md-9 search-container"> 
+        <div class="row">{{view "search/tracks_playlists"}}</div>  
+      </div> 
+      <div class="col-md-2">
+        <div class="row">
+         {{view "my_stations/open_my_stations"}}
+       </div>
      </div>
-   </div>
- </div> 
+   </div> 
 
-</div>
-
+ </div>
 
 
 
 
 
-{{view "search/genres"}}
+
+ {{view "search/genres"}}
 
 
-<div class="container">
+ <div class="container">
 
 
- {{{body}}} 
+   {{{body}}} 
 
 
 
-</div>
+ </div>
 
-<div class="powered">
+ <div class="powered">
   <div>Powered by</div>
   <img src="images/google.png" alt="google">
   <img src="images/yt.png" alt="youtube">
@@ -76,6 +77,17 @@
   <div class="container">
     Copyright 2016 © | Bongobo.com 
   </div>
+</div>
+
+</div>
+
+<div class="mobile">
+  <img src="images/logo.png" alt="bongobo">
+  <span>
+    The website is available <br>only for pc and laptop yet!<br>
+    Listen music to your<br> work and home!<br>
+    See you later :D
+  </span>
 </div>
 
 
