@@ -15,8 +15,7 @@ module.exports = BaseView.extend({
 	},
 
 	postRender: function() {
-		var image = $('.playlist-image img').attr('src')
-		$('head').prepend("<meta property='og:image' content='"+image+"'>");
+
 		window.fbAsyncInit = function() {
 			FB.init({
 				appId      : '1716307738621101',
