@@ -24,7 +24,7 @@ module.exports = {
 			this.app.set('title',  name + ' Playlist | Bongobo');
 
 //console.log('AAAAAAAAAAAAAAAAAAAAA' , result.selected_playlist.models[0.].attributes.snippet.thumbnails.high.url)
-			this.app.set('og_image',   result.selected_playlist.models[0.].attributes.snippet.thumbnails.medium.url );
+			this.app.set('og_image',   result.selected_playlist.models[0.].attributes.snippet.thumbnails.high.url );
 
 			callback(null, result);
 		}.bind(this));
