@@ -494,48 +494,48 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, options;
-  buffer += " \n                <li class=\"light-bg\" data-track=\""
+  buffer += " \n                  <li class=\"light-bg\" data-track=\""
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.resourceId)),stack1 == null || stack1 === false ? stack1 : stack1.videoId)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\"> \n                    <div class=\"col-md-9 track-name\">\n                      <span>";
+    + "\"> \n                      <div class=\"col-md-9 track-name\">\n                          <span>";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.math || depth0.math),stack1 ? stack1.call(depth0, ((stack1 = data),stack1 == null || stack1 === false ? stack1 : stack1.index), "+", 1, options) : helperMissing.call(depth0, "math", ((stack1 = data),stack1 == null || stack1 === false ? stack1 : stack1.index), "+", 1, options)))
     + "</span> "
     + escapeExpression(((stack1 = ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.title)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\n                  </div> \n                  <div class=\"col-md-2\">\n                    <span class=\"musicbar bg-success bg-empty animate\"> \n                        <span class=\"bar1 a3 lter\"></span> \n                        <span class=\"bar2 a5 lt\"></span> \n                        <span class=\"bar3 a1 bg\"></span> \n                        <span class=\"bar4 a4 dk\"></span> \n                        <span class=\"bar5 a2 dker\"></span> \n                    </span>\n                </div>\n                <div class=\"col-md-1 track-actions\"> \n                    <span class=\"play-track\" data-id=\""
+    + "\n                      </div> \n                      <div class=\"col-md-2\">\n                          <span class=\"musicbar bg-success bg-empty animate\"> \n                              <span class=\"bar1 a3 lter\"></span> \n                              <span class=\"bar2 a5 lt\"></span> \n                              <span class=\"bar3 a1 bg\"></span> \n                              <span class=\"bar4 a4 dk\"></span> \n                              <span class=\"bar5 a2 dker\"></span> \n                          </span>\n                      </div>\n                      <div class=\"col-md-1 track-actions\"> \n                          <span class=\"play-track\" data-id=\""
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.resourceId)),stack1 == null || stack1 === false ? stack1 : stack1.videoId)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" title=\"play\"> \n                        <i class=\"fa fa-play\"></i>\n                    </span> \n                    <span class=\"track-play-pause \" title=\"pause/play\">\n\n                        <i class=\"fa fa-pause\"></i>\n                    </span> \n           <!--      <span class=\"add-btn\" data-id=\""
+    + "\" title=\"play\"> \n                              <i class=\"fa fa-play\"></i>\n                          </span> \n                          <span class=\"track-play-pause \" title=\"pause/play\">\n\n                              <i class=\"fa fa-pause\"></i>\n                          </span> \n  <!--      <span class=\"add-btn\" data-id=\""
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.resourceId)),stack1 == null || stack1 === false ? stack1 : stack1.videoId)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\" data-name=\""
     + escapeExpression(((stack1 = ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.title)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" title=\"add to playlist\">\n                    <i class=\"fa fa-plus-circle\"></i>\n                </span>  -->\n                <span class=\"play-custom\" data-id=\""
+    + "\" title=\"add to playlist\">\n  <i class=\"fa fa-plus-circle\"></i>\n</span>  -->\n<span class=\"play-custom\" data-id=\""
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.snippet),stack1 == null || stack1 === false ? stack1 : stack1.resourceId)),stack1 == null || stack1 === false ? stack1 : stack1.videoId)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" title=\"play\"> \n                        <i class=\"fa fa-play\"></i>\n                    </span> \n            </div>   \n        </li>\n\n\n        ";
+    + "\" title=\"play\"> \n  <i class=\"fa fa-play\"></i>\n</span> \n</div>   \n</li>\n\n\n";
   return buffer;
   }
 
-  buffer += "<!-- <div class=\"img-bg\">\n    <img src=\""
+  buffer += "  <div class=\"img-bg\">\n      <img src=\""
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.models),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.snippet)),stack1 == null || stack1 === false ? stack1 : stack1.thumbnails)),stack1 == null || stack1 === false ? stack1 : stack1.high)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\n    <img src=\""
+    + "\">\n      <img src=\""
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.models),stack1 == null || stack1 === false ? stack1 : stack1[2])),stack1 == null || stack1 === false ? stack1 : stack1.snippet)),stack1 == null || stack1 === false ? stack1 : stack1.thumbnails)),stack1 == null || stack1 === false ? stack1 : stack1.high)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\n    <img src=\""
+    + "\">\n      <img src=\""
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.models),stack1 == null || stack1 === false ? stack1 : stack1[3])),stack1 == null || stack1 === false ? stack1 : stack1.snippet)),stack1 == null || stack1 === false ? stack1 : stack1.thumbnails)),stack1 == null || stack1 === false ? stack1 : stack1.high)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\n    <img src=\""
+    + "\">\n      <img src=\""
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.models),stack1 == null || stack1 === false ? stack1 : stack1[4])),stack1 == null || stack1 === false ? stack1 : stack1.snippet)),stack1 == null || stack1 === false ? stack1 : stack1.thumbnails)),stack1 == null || stack1 === false ? stack1 : stack1.high)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\n    <img src=\""
+    + "\">\n      <img src=\""
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.models),stack1 == null || stack1 === false ? stack1 : stack1[5])),stack1 == null || stack1 === false ? stack1 : stack1.snippet)),stack1 == null || stack1 === false ? stack1 : stack1.thumbnails)),stack1 == null || stack1 === false ? stack1 : stack1.high)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\n    <img src=\""
+    + "\">\n      <img src=\""
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.models),stack1 == null || stack1 === false ? stack1 : stack1[6])),stack1 == null || stack1 === false ? stack1 : stack1.snippet)),stack1 == null || stack1 === false ? stack1 : stack1.thumbnails)),stack1 == null || stack1 === false ? stack1 : stack1.high)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\n    <img src=\""
+    + "\">\n      <img src=\""
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.models),stack1 == null || stack1 === false ? stack1 : stack1[7])),stack1 == null || stack1 === false ? stack1 : stack1.snippet)),stack1 == null || stack1 === false ? stack1 : stack1.thumbnails)),stack1 == null || stack1 === false ? stack1 : stack1.high)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\n    <img src=\""
+    + "\">\n      <img src=\""
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.models),stack1 == null || stack1 === false ? stack1 : stack1[8])),stack1 == null || stack1 === false ? stack1 : stack1.snippet)),stack1 == null || stack1 === false ? stack1 : stack1.thumbnails)),stack1 == null || stack1 === false ? stack1 : stack1.high)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\n</div> -->\n";
+    + "\">\n  </div>  \n  ";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "youtube_player", options) : helperMissing.call(depth0, "view", "youtube_player", options)))
-    + " \n<div class=\"col-md-6\"> \n    <div class=\"row\">\n        <div id=\"youtube-playlist\"> \n            <ul class=\"playlist-tracks\">\n                ";
+    + " \n  <div class=\"col-md-6\"> \n      <div class=\"row\">\n          <div id=\"youtube-playlist\"> \n              <ul class=\"playlist-tracks\">\n                  ";
   stack2 = helpers.each.call(depth0, depth0.models, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += "\n    </ul>\n</div>\n</div> \n</div>\n";
+  buffer += "\n</ul>\n</div>\n</div> \n</div>\n";
   return buffer;
   });
 

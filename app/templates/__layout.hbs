@@ -3,6 +3,9 @@
 <html lang="en">
 <head>
   <title>{{appData.title}}</title>
+  {{#if appData.og_image}}
+    <meta property="og:image" content="{{appData.og_image}}" />
+  {{/if}}
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="description" content="Bongobo is a free internet radio with million of playlists. Here you can search and find your favourite music!">
