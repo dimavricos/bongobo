@@ -2,23 +2,71 @@ module.exports = function(Handlebars) {
 
 var templates = {};
 
+templates["header"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, stack2, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, options;
+  buffer += " \n<div class=\"home\">\n  <div class=\"container\"> \n    <div class=\"col-md-4\">\n      <div class='follow-us'>\n\n        <span><a href=\"https://www.facebook.com/bongobomusic/\" target=\"_blank\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i></a></span>\n        <span><a href=\"https://www.youtube.com/channel/UCffWXToLP4-3qhc9r0s974A\" target=\"_blank\"><i class=\"fa fa-youtube\" aria-hidden=\"true\"></i></a></span>\n        <span><a href=\"https://plus.google.com/b/101779017848763333417/101779017848763333417/about/p/pub\" target=\"_blank\"><i class=\"fa fa-google-plus\" aria-hidden=\"true\"></i></a></span>\n      </div>\n    </div>\n    <div class=\"col-md-4 logo\">\n     <a href=\"http://www.bongobo.com/\"><img src=\"images/logo.png\" alt=\"bongobo\"></a> \n   </div>\n\n   <div class=\"col-md-4\">\n    <div class=\"row\">\n     ";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "my_stations/open_my_stations", options) : helperMissing.call(depth0, "view", "my_stations/open_my_stations", options)))
+    + "\n   </div>\n </div>\n\n <h1 class=\"hero-message\">Welcome to <b>Bongobo</b> your new <u>free internet radio</u> with zero audio ads</h1>\n <div class=\"hero-search\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "search/tracks_playlists", options) : helperMissing.call(depth0, "view", "search/tracks_playlists", options)))
+    + "</div> \n <div class=\"find-from-list\">\n  <span>or</span>\n  <button>Find from our list <i class=\"fa fa-angle-down\" aria-hidden=\"true\"></i></button>\n</div>\n\n</div>\n</div> \n\n";
+  return buffer;
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, options;
+  buffer += "\n<div class=\"dark-bg header\"> \n  <div class=\"container\">\n   <div class=\"col-md-1\">\n    <div class=\"row logo\">\n      <div><a href=\"http://www.bongobo.com/\"><img src=\"images/logo.png\" alt=\"bongobo\"></a></div> \n    </div>\n  </div>\n\n  <div class=\"col-md-9 search-container\"> \n    <div class=\"row\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "search/tracks_playlists", options) : helperMissing.call(depth0, "view", "search/tracks_playlists", options)))
+    + "</div>  \n  </div> \n  <div class=\"col-md-2\">\n    <div class=\"row\">\n     ";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "my_stations/open_my_stations", options) : helperMissing.call(depth0, "view", "my_stations/open_my_stations", options)))
+    + "\n   </div>\n </div>\n</div> \n\n</div>\n\n\n\n";
+  return buffer;
+  }
+
+  options = {hash:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),data:data};
+  stack2 = ((stack1 = helpers.ifHome || depth0.ifHome),stack1 ? stack1.call(depth0, ((stack1 = depth0.params),stack1 == null || stack1 === false ? stack1 : stack1.route), "/", options) : helperMissing.call(depth0, "ifHome", ((stack1 = depth0.params),stack1 == null || stack1 === false ? stack1 : stack1.route), "/", options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n\n\n\n";
+  return buffer;
+  });
+
 templates["home/index"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  buffer += "<div class=\"home\">  \n	<h1 class=\"hero-message\">Welcome to <b>Bongobo</b> your new <u>free internet radio</u> with zero audio ads</h1>\n	<div class=\"dark-bg\"> \n		";
+  buffer += "<div class=\"container music-list\">\n";
+  options = {hash:{
+    'collection': (depth0.genres)
+  },data:data};
+  buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "search/genres", options) : helperMissing.call(depth0, "view", "search/genres", options)))
+    + " \n";
+  options = {hash:{
+    'collection': (depth0.lastfm_artists)
+  },data:data};
+  buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "search/lastfm_artists", options) : helperMissing.call(depth0, "view", "search/lastfm_artists", options)))
+    + " \n\n</div>\n<button class=\"view-all-music-lists\">View all</button>\n\n \n";
   options = {hash:{
     'collection': (depth0.playlists)
   },data:data};
-  buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "playlists/index", options) : helperMissing.call(depth0, "view", "playlists/index", options)))
-    + "  \n	</div> \n</div>\n\n\n\n\n<div>";
+  buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "playlists/playlist_view", options) : helperMissing.call(depth0, "view", "playlists/playlist_view", options)))
+    + "    \n";
   options = {hash:{
     'collection': (depth0.artists)
   },data:data};
   buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "playlists/artists", options) : helperMissing.call(depth0, "view", "playlists/artists", options)))
-    + "</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+    + "\n \n\n\n\n\n\n\n\n\n\n\n\n\n";
   return buffer;
   });
 
@@ -272,6 +320,29 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 templates["playlists/index"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+
+
+  options = {hash:{
+    'collection': (depth0.genres)
+  },data:data};
+  buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "search/genres", options) : helperMissing.call(depth0, "view", "search/genres", options)))
+    + " \n";
+  options = {hash:{
+    'collection': (depth0.Playlists)
+  },data:data};
+  buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "playlists/playlist_view", options) : helperMissing.call(depth0, "view", "playlists/playlist_view", options)))
+    + "\n";
+  options = {hash:{
+    'collection': (depth0.artists)
+  },data:data};
+  buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "playlists/artists", options) : helperMissing.call(depth0, "view", "playlists/artists", options)));
+  return buffer;
+  });
+
+templates["playlists/playlist_view"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, stack2, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, functionType="function", self=this;
 
 function program1(depth0,data,depth1) {
@@ -332,7 +403,7 @@ function program7(depth0,data) {
   return "\n<span class=\"no-results\">NO PLAYLISTS FOUND</span>\n";
   }
 
-  buffer += "\n\n\n<div class=\"col-md-8 col-md-offset-2\">\n  <div class=\"row\">\n\n  	<h2 class=\"title\">\n      <div>";
+  buffer += " \n <div class=\"container\">\n\n<div class=\"col-md-8 col-md-offset-2\">\n  <div class=\"row\">\n\n  	<h2 class=\"title\">\n      <div>";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.removePavla || depth0.removePavla),stack1 ? stack1.call(depth0, ((stack1 = depth0.params),stack1 == null || stack1 === false ? stack1 : stack1.station), options) : helperMissing.call(depth0, "removePavla", ((stack1 = depth0.params),stack1 == null || stack1 === false ? stack1 : stack1.station), options)))
     + " ("
@@ -344,17 +415,67 @@ function program7(depth0,data) {
   buffer += " \n</div>\n\n</div>\n</div>\n\n\n\n";
   stack2 = helpers['if'].call(depth0, depth0.models, {hash:{},inverse:self.program(7, program7, data),fn:self.program(5, program5, data),data:data});
   if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += "\n\n\n\n";
+  buffer += "\n\n</div>\n\n";
   return buffer;
   });
 
 templates["search/genres"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var stack1, stack2, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
+
+function program1(depth0,data) {
   
+  var buffer = "", stack1;
+  buffer += " \n<div class=\"col-md-4\">\n    <h3 class=\"title\">\n        <div>Genre</div> \n        <span></span>\n    </h3>\n    <ul>\n        <li><a href=\"/playlists?station=top-100-music\">Top 100</a></li>\n        ";
+  stack1 = helpers.each.call(depth0, depth0.models, {hash:{},inverse:self.noop,fn:self.program(2, program2, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n    </ul>\n</div>\n<div class=\"col-md-4\">\n    <h3 class=\"title\">\n        <div>Mood</div> \n        <span></span>\n    </h3>\n     <ul>\n\n        <li><a href=\"/playlists?station=happy-mood-music\">Happy</a></li>\n        <li><a href=\"/playlists?station=summer-mood-music\">Summer</a></li>\n        <li><a href=\"/playlists?station=chill-mood-music\">Chill</a></li>\n        <li><a href=\"/playlists?station=coffee-mood-music\">Coffee</a></li>\n        <li><a href=\"/playlists?station=relax-mood-music\">Relax</a></li>\n        <li><a href=\"/playlists?station=sleep-mood-music\">Sleep</a></li>\n        <li><a href=\"/playlists?station=party-mood-music\">Party</a></li>\n        <li><a href=\"/playlists?station=melancholic-mood-music\">Melancholic</a></li>\n        <li><a href=\"/playlists?station=sexy-mood-music\">Sexy</a></li>\n        <li><a href=\"/playlists?station=love-mood-music\">Love</a></li>\n    </ul>\n</div>\n\n";
+  return buffer;
+  }
+function program2(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n        <li><a href=\"/playlists?station=";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "-music\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</a></li>\n\n        ";
+  return buffer;
+  }
 
+function program4(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<div class=\"genres-container\">\n  <div class=\"genres\">\n    <div class=\"container\">\n      <div class=\"title\">Genre Stations <span></span></div>\n      <div class=\"genres-carousel\">\n       <span class=\"item\"><a href=\"/playlists?station=top-100-music\" class=\"active\">Top 100 <i class=\"fa fa-bolt\" aria-hidden=\"true\"></i></a></span>\n\n        ";
+  stack1 = helpers.each.call(depth0, depth0.models, {hash:{},inverse:self.noop,fn:self.program(5, program5, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n       \n     </div>\n   </div>\n </div>\n</div>\n";
+  return buffer;
+  }
+function program5(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n        <span class=\"item\"><a href=\"/playlists?station=";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "-music\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</a></span>\n\n\n        ";
+  return buffer;
+  }
 
-  return "<div class=\"genres\">\n  <div class=\"container\">\n    <div class=\"title\">Genre Stations <span></span></div>\n    <div class=\"genres-carousel\">\n     <span class=\"item\"><a href=\"/playlists?station=top-100-music\" class=\"active\">Top 100 <i class=\"fa fa-bolt\" aria-hidden=\"true\"></i></a></span>\n     <span class=\"item\"><a href=\"/playlists?station=pop-music\">Pop</a></span>\n     <span class=\"item\"><a href=\"/playlists?station=country-music\">Country</a></span>\n     <span class=\"item\"><a href=\"/playlists?station=country-music\">Hip Hop</a></span>\n     <span class=\"item\"><a href=\"/playlists?station=workout-music\">Workout</a></span>\n     <span class=\"item\"><a href=\"/playlists?station=Dance-music\">Dance</a></span>\n     <span class=\"item\"><a href=\"/playlists?station=Party-music\">Party</a></span>\n     <span class=\"item\"><a href=\"/playlists?station=Sleep-music\">Sleep</a></span>\n     <span class=\"item\"><a href=\"/playlists?station=Dinner-music\">Dinner</a></span>\n     <span class=\"item\"> <a href=\"/playlists?station=Chill-music\">Chill</a></span>\n     <span class=\"item\"><a href=\"/playlists?station=love-music\">Love Songs</a></span>\n     <span class=\"item\"><a href=\"/playlists?station=rnb-soul-music\">R&B/Soul</a></span>\n     <span class=\"item\"><a href=\"/playlists?station=Rock-music\">Rock</a></span>\n     <span class=\"item\"><a href=\"/playlists?station=Punk-music\">Punk</a></span>\n     <span class=\"item\"><a href=\"/playlists?station=Metal-music\">Metal</a></span>\n     <span class=\"item\"><a href=\"/playlists?station=Indie-music\">Indie</a></span>\n   </div>\n </div>\n</div>";
+  options = {hash:{},inverse:self.program(4, program4, data),fn:self.program(1, program1, data),data:data};
+  stack2 = ((stack1 = helpers.ifHome || depth0.ifHome),stack1 ? stack1.call(depth0, ((stack1 = depth0.params),stack1 == null || stack1 === false ? stack1 : stack1.route), "/", options) : helperMissing.call(depth0, "ifHome", ((stack1 = depth0.params),stack1 == null || stack1 === false ? stack1 : stack1.route), "/", options));
+  if(stack2 || stack2 === 0) { return stack2; }
+  else { return ''; }
   });
 
 templates["search/index"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -363,7 +484,34 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div id=\"loading\">\n  <img src=\"images/ajax-loader.gif\">\n</div>\n\n<div class=\"search-column\">\n <div class=\"open-search\">\n  <i class=\"fa fa-arrow-left\"></i>\n</div>\n<div class=\"my-search-results\">\n  <section>  \n    <div  class=\"tracks-container\">\n      <div class=\"close-search \"><i class=\"fa fa-times\"></i></div>\n      \n      <div id=\"search-results\"></div>   \n      <div class=\"loader\"><img src=\"images/ajax-loader.gif\"></div>\n    </div> \n    <div  class=\"playlist-container\"> \n      <div class=\"close-search \"><i class=\"fa fa-times\"></i></div>\n      <span class=\"results-label\">SEARCH RESULTS FOR:</span>  \n      <div id=\"playlists\"></div>   \n      <div class=\"loader\"><img src=\"images/ajax-loader.gif\"></div>\n    </div>   \n  </section>\n</div> \n</div>";
+  return "\n\n<div class=\"search-column\">\n <div class=\"open-search\">\n  <i class=\"fa fa-arrow-left\"></i>\n</div>\n<div class=\"my-search-results\">\n  <section>  \n    <div  class=\"tracks-container\">\n      <div class=\"close-search \"><i class=\"fa fa-times\"></i></div>\n      \n      <div id=\"search-results\"></div>   \n      <div class=\"loader\"><img src=\"images/ajax-loader.gif\" alt=\"loader\"></div>\n    </div> \n    <div  class=\"playlist-container\"> \n      <div class=\"close-search \"><i class=\"fa fa-times\"></i></div>\n      <span class=\"results-label\">SEARCH RESULTS FOR:</span>  \n      <div id=\"playlists\"></div>   \n      <div class=\"loader\"><img src=\"images/ajax-loader.gif\" alt=\"loader\"></div>\n    </div>   \n  </section>\n</div> \n</div>\n\n<div class=\"page-loader\">\n  <img src=\"images/ajax-loader.gif\" alt=\"loader\">\n</div>";
+  });
+
+templates["search/lastfm_artists"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n        <li><a href=\"/playlists?station=";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "-music\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</a></li>\n\n        ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"col-md-4\">\n    <h3 class=\"title\">\n        <div>Artist</div> \n        <span></span>\n    </h3>\n    <ul>\n\n        ";
+  stack1 = helpers.each.call(depth0, depth0.models, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n    </ul>\n</div>";
+  return buffer;
   });
 
 templates["search/tracks_playlists"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -372,7 +520,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  buffer += "		\r\n\r\n		<div class=\"search-for\">  \r\n			<span class=\"light-bg\">Search for</span>\r\n\r\n			<div class=\"search-options\">\r\n				<ul>\r\n					<li data-id=\"music\" class=\"active\">Playlist</li>\r\n					<li data-id=\"song\" >Track</li>  \r\n				</ul>\r\n			</div> \r\n\r\n			<div class=\"search\">\r\n				<div> \r\n					<div class=\"search-for-playlists-container\">\r\n						<form class=\"search-for-playlists\" > \r\n							<input  type=\"text\" placeholder=\"Type the playlist you want to find\">\r\n							<button type=\"submit\"><i class=\"fa fa-search\"></i> Search</button>\r\n						</form> \r\n					</div> \r\n\r\n					<div class=\"search-for-tracks-container\">\r\n						<form class=\"search-for-tracks\" > \r\n							<input  type=\"text\" placeholder=\"Type the track you want to find\">\r\n							<button type=\"submit\"><i class=\"fa fa-search\"></i> Search</button>\r\n						</form> \r\n					</div> \r\n\r\n				 \r\n					\r\n				</div> \r\n			</div> \r\n\r\n		</div> \r\n\r\n";
+  buffer += "		\r\n\r\n<div class=\"search-for\">  \r\n	<span class=\"light-bg\">Search for</span>\r\n\r\n	<div class=\"search-options\">\r\n		<ul>\r\n			<li data-id=\"music\" class=\"active\">Playlist</li>\r\n			<li data-id=\"song\" >Track</li>  \r\n		</ul>\r\n	</div> \r\n\r\n	<div class=\"search\">\r\n		<div> \r\n			<div class=\"search-for-playlists-container\">\r\n				<form class=\"search-for-playlists\" > \r\n					<input  type=\"text\" placeholder=\"Type a genre, mood or artist \">\r\n					<button type=\"submit\"><i class=\"fa fa-search\"></i> Search</button>\r\n				</form> \r\n			</div> \r\n\r\n			<div class=\"search-for-tracks-container\">\r\n				<form class=\"search-for-tracks\" > \r\n					<input  type=\"text\" placeholder=\"Type the track you want to find\">\r\n					<button type=\"submit\"><i class=\"fa fa-search\"></i> Search</button>\r\n				</form> \r\n			</div> \r\n\r\n\r\n\r\n		</div> \r\n	</div> \r\n\r\n</div> \r\n\r\n";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "search/index", options) : helperMissing.call(depth0, "view", "search/index", options)))
     + "\r\n";
@@ -385,7 +533,11 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  buffer += "\n\n\n<div class=\"player-container\">\n\n	";
+  options = {hash:{
+    'collection': (depth0.genres)
+  },data:data};
+  buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "search/genres", options) : helperMissing.call(depth0, "view", "search/genres", options)))
+    + " \n<div class=\"container\">\n\n\n<div class=\"player-container\">\n\n	";
   options = {hash:{
     'collection': (depth0.playlist_details)
   },data:data};
@@ -395,12 +547,12 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     'collection': (depth0.selected_playlist)
   },data:data};
   buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "tracks/selected_playlist", options) : helperMissing.call(depth0, "view", "tracks/selected_playlist", options)))
-    + " \n\n</div>\n\n<div class=\"related-playlists\">\n	 \n	";
+    + " \n\n</div>\n\n<div class=\"related-playlists\">\n	\n	";
   options = {hash:{
     'collection': (depth0.related_playlists)
   },data:data};
-  buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "playlists/index", options) : helperMissing.call(depth0, "view", "playlists/index", options)))
-    + "\n\n</div>\n\n\n";
+  buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "playlists/playlist_view", options) : helperMissing.call(depth0, "view", "playlists/playlist_view", options)))
+    + "\n\n</div>\n\n\n</div>";
   return buffer;
   });
 

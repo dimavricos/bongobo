@@ -48,5 +48,7 @@ var BaseApp = require('rendr/shared/app')
   getAppViewClass: function() {
     return require('./views/app_view');
   }
+
+  
   
 });

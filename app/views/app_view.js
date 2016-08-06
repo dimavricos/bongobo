@@ -16,5 +16,7 @@ module.exports = BaseAppView.extend({
     	document.getElementsByTagName("META")[0].content = image
         
     });
-  }
+  },
+
+
 });

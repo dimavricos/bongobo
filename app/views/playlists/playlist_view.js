@@ -1,6 +1,4 @@
 var BaseView = require('../base');
-var tracks = require('../../collections/tracks');
-var tracks_view = require('../../views/tracks/index')
 module.exports = BaseView.extend({
   el : "#playlists" ,
   className: 'playlists-view',
@@ -43,4 +41,4 @@ module.exports = BaseView.extend({
 
 
 });
-module.exports.id = 'playlists/index';
+module.exports.id = 'playlists/playlist_view';

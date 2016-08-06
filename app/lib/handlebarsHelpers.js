@@ -2,6 +2,7 @@
  * We inject the Handlebars instance, because this module doesn't know where
  * the actual Handlebars instance will come from.
  */
+
  module.exports = function(Handlebars) {
   return {
     copyright: function(year) {
@@ -76,6 +77,14 @@
     text = text.replace(/[^A-Z0-9]+/ig, " ");
     return new Handlebars.SafeString(text);
   },
+
+
+  ifHome :  function(v1, v2, options) {
+    if(v1 === v2) {
+      return options.fn(this);
+    }
+    return options.inverse(this);
+  }
 
 
   

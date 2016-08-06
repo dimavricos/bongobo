@@ -1,23 +1,55 @@
-<div class="genres">
-  <div class="container">
-    <div class="title">Genre Stations <span></span></div>
-    <div class="genres-carousel">
-     <span class="item"><a href="/playlists?station=top-100-music" class="active">Top 100 <i class="fa fa-bolt" aria-hidden="true"></i></a></span>
-     <span class="item"><a href="/playlists?station=pop-music">Pop</a></span>
-     <span class="item"><a href="/playlists?station=country-music">Country</a></span>
-     <span class="item"><a href="/playlists?station=country-music">Hip Hop</a></span>
-     <span class="item"><a href="/playlists?station=workout-music">Workout</a></span>
-     <span class="item"><a href="/playlists?station=Dance-music">Dance</a></span>
-     <span class="item"><a href="/playlists?station=Party-music">Party</a></span>
-     <span class="item"><a href="/playlists?station=Sleep-music">Sleep</a></span>
-     <span class="item"><a href="/playlists?station=Dinner-music">Dinner</a></span>
-     <span class="item"> <a href="/playlists?station=Chill-music">Chill</a></span>
-     <span class="item"><a href="/playlists?station=love-music">Love Songs</a></span>
-     <span class="item"><a href="/playlists?station=rnb-soul-music">R&B/Soul</a></span>
-     <span class="item"><a href="/playlists?station=Rock-music">Rock</a></span>
-     <span class="item"><a href="/playlists?station=Punk-music">Punk</a></span>
-     <span class="item"><a href="/playlists?station=Metal-music">Metal</a></span>
-     <span class="item"><a href="/playlists?station=Indie-music">Indie</a></span>
+{{#ifHome this.params.route '/' }} 
+<div class="col-md-4">
+    <h3 class="title">
+        <div>Genre</div> 
+        <span></span>
+    </h3>
+    <ul>
+        <li><a href="/playlists?station=top-100-music">Top 100</a></li>
+        {{#each models}}
+
+        <li><a href="/playlists?station={{name}}-music">{{name}}</a></li>
+
+        {{/each}}
+
+    </ul>
+</div>
+<div class="col-md-4">
+    <h3 class="title">
+        <div>Mood</div> 
+        <span></span>
+    </h3>
+     <ul>
+
+        <li><a href="/playlists?station=happy-mood-music">Happy</a></li>
+        <li><a href="/playlists?station=summer-mood-music">Summer</a></li>
+        <li><a href="/playlists?station=chill-mood-music">Chill</a></li>
+        <li><a href="/playlists?station=coffee-mood-music">Coffee</a></li>
+        <li><a href="/playlists?station=relax-mood-music">Relax</a></li>
+        <li><a href="/playlists?station=sleep-mood-music">Sleep</a></li>
+        <li><a href="/playlists?station=party-mood-music">Party</a></li>
+        <li><a href="/playlists?station=melancholic-mood-music">Melancholic</a></li>
+        <li><a href="/playlists?station=sexy-mood-music">Sexy</a></li>
+        <li><a href="/playlists?station=love-mood-music">Love</a></li>
+    </ul>
+</div>
+
+{{else}}
+<div class="genres-container">
+  <div class="genres">
+    <div class="container">
+      <div class="title">Genre Stations <span></span></div>
+      <div class="genres-carousel">
+       <span class="item"><a href="/playlists?station=top-100-music" class="active">Top 100 <i class="fa fa-bolt" aria-hidden="true"></i></a></span>
+
+        {{#each models}}
+        <span class="item"><a href="/playlists?station={{name}}-music">{{name}}</a></span>
+
+
+        {{/each}}
+       
+     </div>
    </div>
  </div>
 </div>
+{{/ifHome}}

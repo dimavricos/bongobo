@@ -1,14 +1,14 @@
 var express = require('express')
-  , rendr = require('rendr')
-  , app = express();
+, rendr = require('rendr')
+, app = express();
 
 /**
  * Initialize Express middleware stack.
  */
-app.use(express.compress());
-app.use(express.static(__dirname + '/public'));
-app.use(express.logger());
-app.use(express.bodyParser());
+ app.use(express.compress());
+ app.use(express.static(__dirname + '/public'));
+ app.use(express.logger());
+ app.use(express.bodyParser());
 
 
 
@@ -18,14 +18,19 @@ app.use(express.bodyParser());
  * config file. Also, if you want more control over the fetching of data, you can pass your own
  * `dataAdapter` object to the call to `rendr.createServer()`.
  */
-var dataAdapterConfig = {
+ var dataAdapterConfig = {
   'default': {
     host: 'www.googleapis.com',
     protocol: 'https'
   },
-   
+
   'artists' : {
     host: 'ajax.googleapis.com',
+    protocol : 'http'
+  },
+
+  'lastfm' : {
+    host: 'ws.audioscrobbler.com/2.0',
     protocol : 'http'
   }
 };
@@ -33,7 +38,7 @@ var dataAdapterConfig = {
 /**
  * Initialize our Rendr server.
  */
-var server = rendr.createServer({
+ var server = rendr.createServer({
   dataAdapterConfig: dataAdapterConfig
 });
 
@@ -45,19 +50,28 @@ var server = rendr.createServer({
   *
   *     app.use('/my_cool_app', server);
   */
-app.use(server);
+  app.use(server);
+
+
+
+
 
 /**
  * Start the Express server.
  */
-function start(){
+ function start(){
   var port = process.env.PORT || 3030;
   app.listen(port);
   console.log("server pid %s listening on port %s in %s mode",
     process.pid,
     port,
     app.get('env')
-  );
+    );
+
+
+
+
+
 }
 
 
@@ -65,7 +79,7 @@ function start(){
  * Only start server if this script is executed, not if it's require()'d.
  * This makes it easier to run integration tests on ephemeral ports.
  */
-if (require.main === module) {
+ if (require.main === module) {
   start();
 }
 

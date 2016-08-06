@@ -32,44 +32,15 @@
     {{view "my_stations/index"}}
 
 
+ 
 
-
-    <div class="dark-bg header"> 
-      <div class="container">
-       <div class="col-md-1">
-        <div class="row logo">
-          <div><a href="http://www.bongobo.com/"><img src="images/logo.png" alt="bongobo"></a></div> 
-        </div>
-      </div>
-
-      <div class="col-md-9 search-container"> 
-        <div class="row">{{view "search/tracks_playlists"}}</div>  
-      </div> 
-      <div class="col-md-2">
-        <div class="row">
-         {{view "my_stations/open_my_stations"}}
-       </div>
-     </div>
-   </div> 
-
- </div>
-
-
-
-
-
-
- {{view "search/genres"}}
-
-
- <div class="container">
+{{view "header"  param_value=this.app.req.url}} 
 
 
    {{{body}}} 
 
 
-
- </div>
+ 
 
  <div class="powered">
   <div>Powered by</div>

@@ -1,6 +1,7 @@
 var BaseView = require('../base');
 
 module.exports = BaseView.extend({
+    className: 'search_popup', 
 	events : {
 		'click .close-search ' : 'closeSearch'
 	},
@@ -30,9 +31,7 @@ module.exports = BaseView.extend({
     	ajaxStop: function() {  NProgress.done(); }    
     });
 
-    $(window).load(function() {
-    	$('#loading').fadeOut();
-    });
+    
 
 },
 

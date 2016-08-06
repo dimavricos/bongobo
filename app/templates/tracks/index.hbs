@@ -1,4 +1,5 @@
-
+{{view "search/genres" collection=genres}} 
+<div class="container">
 
 
 <div class="player-container">
@@ -10,9 +11,10 @@
 </div>
 
 <div class="related-playlists">
-	 
-	{{view "playlists/index" collection=related_playlists}}
+	
+	{{view "playlists/playlist_view" collection=related_playlists}}
 
 </div>
 
 
+</div>

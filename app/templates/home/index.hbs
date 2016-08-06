@@ -1,15 +1,14 @@
-<div class="home">  
-	<h1 class="hero-message">Welcome to <b>Bongobo</b> your new <u>free internet radio</u> with zero audio ads</h1>
-	<div class="dark-bg"> 
-		{{view "playlists/index" collection=playlists}}  
-	</div> 
+<div class="container music-list">
+{{view "search/genres" collection=genres}} 
+{{view "search/lastfm_artists" collection=lastfm_artists}} 
+
 </div>
+<button class="view-all-music-lists">View all</button>
 
-
-
-
-<div>{{view "playlists/artists" collection=artists}}</div>
-
+ 
+{{view "playlists/playlist_view" collection=playlists}}    
+{{view "playlists/artists" collection=artists}}
+ 
 
 
 

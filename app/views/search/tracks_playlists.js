@@ -1,7 +1,7 @@
 var searchTracks = require('../../collections/search_tracks');
 var searchPlaylists = require('../../collections/playlists');
 var searchResults = require('../../views/tracks/search_results');
-var searchResultsPlaylists = require('../../views/playlists/index');
+var searchResultsPlaylists = require('../../views/playlists/playlist_view');
 var BaseView = require('../base');
 
 module.exports = BaseView.extend({
@@ -30,6 +30,11 @@ module.exports = BaseView.extend({
         $('#scrollDiv').fadeOut('slow');
       }
     });
+
+    $(window).load(function() {
+      $('.page-loader').fadeOut();
+    });
+
 
   },
 

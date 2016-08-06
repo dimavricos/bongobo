@@ -2,7 +2,9 @@ module.exports = {
 	index: function(params, callback) {
 		this.app.set('title', 'Playlists ');
 		var spec = {
-			collection: {collection: 'Playlists', params: params},
+			Playlists : {collection: 'Playlists', params: params},
+			artists : {collection: 'artists' },	
+			genres : {collection: 'genres' , params: {route : 'playlist-list'}},  
 
 		};
 		this.app.fetch(spec, function(err, result) {

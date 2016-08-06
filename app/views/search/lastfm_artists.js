@@ -10,11 +10,11 @@ module.exports = BaseView.extend({
 },
 
 	postRender : function(){ 
-
+ 
 
 
 	}
 
 
 });
-module.exports.id = 'search/genres';
+module.exports.id = 'search/lastfm_artists';
