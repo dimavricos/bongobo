@@ -8770,7 +8770,7 @@ span.no-stations{
   padding: 0;
   height: 426px;
   overflow-y: auto;
-  padding-top: 57px;
+
 } 
 
 .my-stations li:nth-of-type(2) ul{
@@ -8814,19 +8814,19 @@ span.no-stations{
 }
 
 .my-stations li.first-li{
-  background: #FFDA86;
-  margin-bottom: 0;
-  padding: 20px;
-  text-align: center;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: fixed;
-  width: 500px;
-  top: 134px;
-  left: 0;
-  right: 0;
-  margin: auto;
+background: #FFDA86;
+    margin-bottom: 0;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    width: 500px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 #edit-my-stations .my-stations{

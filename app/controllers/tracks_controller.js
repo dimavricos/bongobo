@@ -14,18 +14,23 @@ module.exports = {
 			if (err) return callback(err);
 			var str;
 			var name = result.playlist_details.params.name
-			if(typeof name !== "undefined"){
-				
+			if(typeof name !== "undefined"){ 
 				name = name.split('-').join(' '); 
 			}else{
 				name = "Bongobo | free internet radio with zero audio ads"
 			}
 			
-			
+			console.log('tralala' , result.selected_playlist.models[0].attributes.snippet.title == 'Deleted video')
+			var image = result.selected_playlist.models[0].attributes.snippet.title
+			if(image !== 'Deleted video'){ 
+				image = result.selected_playlist.models[0].attributes.snippet.thumbnails.high.url 
+			}else{
+				 image = ''
+			}
 			this.app.set('title',  name + ' Playlist | Bongobo');
-
+		 	this.app.set('og_image',   image );
 			
-			this.app.set('og_image',   result.selected_playlist.models[0.].attributes.snippet.thumbnails.high.url );
+			
 
 			callback(null, result);
 		}.bind(this));
