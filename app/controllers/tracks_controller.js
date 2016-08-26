@@ -20,12 +20,12 @@ module.exports = {
 				name = "Bongobo | free internet radio with zero audio ads"
 			}
 			
-			console.log('tralala' , result.selected_playlist.models[0].attributes.snippet.title == 'Deleted video')
+			console.log('tralala' , result.selected_playlist.models[0].attributes.snippet.title)
 			var image = result.selected_playlist.models[0].attributes.snippet.title
-			if(image !== 'Deleted video'){ 
+			if(image !== 'Deleted video' &  image !== 'Private video'){ 
 				image = result.selected_playlist.models[0].attributes.snippet.thumbnails.high.url 
 			}else{
-				 image = ''
+				image = ''
 			}
 			this.app.set('title',  name + ' Playlist | Bongobo');
 		 	this.app.set('og_image',   image );
