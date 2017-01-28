@@ -3,7 +3,6 @@ module.exports = {
 		this.app.set('title', 'Playlists ');
 		var spec = {
 			Playlists : {collection: 'Playlists', params: params},
-			artists : {collection: 'artists' },	
 			genres : {collection: 'genres' , params: {route : 'playlist-list'}},  
 
 		};

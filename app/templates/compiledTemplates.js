@@ -61,12 +61,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     'collection': (depth0.playlists)
   },data:data};
   buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "playlists/playlist_view", options) : helperMissing.call(depth0, "view", "playlists/playlist_view", options)))
-    + "    \n";
-  options = {hash:{
-    'collection': (depth0.artists)
-  },data:data};
-  buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "playlists/artists", options) : helperMissing.call(depth0, "view", "playlists/artists", options)))
-    + "\n \n\n\n\n\n\n\n\n\n\n\n\n\n";
+    + "    \n\n \n\n\n\n\n\n\n\n\n\n\n\n\n";
   return buffer;
   });
 
@@ -325,10 +320,6 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   },data:data};
   buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "playlists/playlist_view", options) : helperMissing.call(depth0, "view", "playlists/playlist_view", options)))
     + "\n";
-  options = {hash:{
-    'collection': (depth0.artists)
-  },data:data};
-  buffer += escapeExpression(((stack1 = helpers.view || depth0.view),stack1 ? stack1.call(depth0, "playlists/artists", options) : helperMissing.call(depth0, "view", "playlists/artists", options)));
   return buffer;
   });
 

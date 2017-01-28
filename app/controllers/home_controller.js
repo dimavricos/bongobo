@@ -4,7 +4,6 @@ module.exports = {
     var spec = {
 
       playlists : {collection: 'Playlists', params: {station : 'top 100 music'}},
-      artists : {collection: 'artists' },	
       genres : {collection: 'genres' , params: {route : '/'}},  
       lastfm_artists : {collection: 'lastfm_artists' },  
     
