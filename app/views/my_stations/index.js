@@ -36,7 +36,6 @@ module.exports = BaseView.extend({
 		require('ui') 
 
 
-		var that = this
 		that.station_name = 'my new station'
 
 		that.Station = Backbone.Model.extend({
@@ -153,7 +152,7 @@ module.exports = BaseView.extend({
 			}
 
 		}
-	 
+
 
 	},
 

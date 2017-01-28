@@ -29,47 +29,43 @@
 <body> 
   <div class="desktop">
 
-    {{view "my_stations/index"}}
+    {{view "my_stations/index"}} 
+    {{view "header"  param_value=this.app.req.url}}  
+    {{{body}}}  
 
 
- 
+    <div class="powered">
+      <div>Powered by</div>
+      <img src="images/google.png" alt="google">
+      <img src="images/yt.png" alt="youtube">
+      <img src="images/billboard.png" alt="billboard">
+    </div>
+    <div class="dark-bg footer">
+      <div class="container">
+        Copyright 2016 © | Bongobo.com 
+      </div>
+    </div>
 
-{{view "header"  param_value=this.app.req.url}}  
-   {{{body}}}  
- 
-
- <div class="powered">
-  <div>Powered by</div>
-  <img src="images/google.png" alt="google">
-  <img src="images/yt.png" alt="youtube">
-  <img src="images/billboard.png" alt="billboard">
-</div>
-<div class="dark-bg footer">
-  <div class="container">
-    Copyright 2016 © | Bongobo.com 
   </div>
-</div>
 
-</div>
-
-<div class="mobile">
-  <img src="images/logo.png" alt="bongobo">
-  <span>
-    The website is available <br>only for pc and laptop yet!<br>
-    Listen music to your<br> work and home!<br>
-    See you later :D
-  </span>
-</div>
+  <div class="mobile">
+    <img src="images/logo.png" alt="bongobo">
+    <span>
+      The website is available <br>only for pc and laptop yet!<br>
+      Listen music to your<br> work and home!<br>
+      See you later :D
+    </span>
+  </div>
 
 
-<script src="/mergedAssets.js"></script>
-<script>
-(function() {
-  var App = window.App = new (require('app/app'))({{json appData}});
-  App.bootstrapData({{json bootstrappedData}});
-  App.start();
-})();
-</script>
+  <script src="/mergedAssets.js"></script>
+  <script>
+  (function() {
+    var App = window.App = new (require('app/app'))({{json appData}});
+    App.bootstrapData({{json bootstrappedData}});
+    App.start();
+  })();
+  </script>
 
 
 
