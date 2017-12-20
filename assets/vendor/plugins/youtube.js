@@ -212,7 +212,7 @@
     // 'red' or 'white'
     showinfo: false,
     modestbranding: true,
-    protocol: 'http',
+    protocol: 'https',
     // set to 'https' for compatibility on SSL-enabled pages
     // with respect to [wmode] - 'transparent' maintains z-index, but disables GPU acceleration
     wmode: 'transparent',

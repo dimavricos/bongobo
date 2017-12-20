@@ -8814,19 +8814,19 @@ span.no-stations{
 }
 
 .my-stations li.first-li{
-  background: #FFDA86;
-  margin-bottom: 0;
-  padding: 20px;
-  text-align: center;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: relative;
-  width: 500px;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+background: #FFDA86;
+    margin-bottom: 0;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    width: 500px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 #edit-my-stations .my-stations{
@@ -8960,7 +8960,7 @@ li.no-playlists{
   clear: both;
   position: relative;
   top: 30px;
-  /*  border-top: 1px dashed #CACACA;*/
+/*  border-top: 1px dashed #CACACA;*/
   padding-top: 20px;
 }
 
@@ -9349,13 +9349,13 @@ li.no-playlists{
   border-radius: 30px;
   margin-top: 8px;
   border: 1px solid #000;
-
+ 
 }
 
 .home .logo{
-  text-align: center;
-  margin-top: -14px;
-  margin-bottom: 20px;
+    text-align: center;
+    margin-top: -14px;
+    margin-bottom: 20px;
 }
 
 .home  .search-column {
@@ -9428,40 +9428,40 @@ li.no-playlists{
 }
 
 .follow-us{
-  height: 31px;
-
-  padding: 0;
-  float: left;
-  position: relative;
-
-
-  margin-top: 0px;
-
-  text-align: center;
+      height: 31px;
+    
+    padding: 0;
+    float: left;
+    position: relative;
+ 
+ 
+    margin-top: 0px;
+ 
+    text-align: center;
 }
 
 .follow-us a{
-  color: #ffffff;
-  display: inline-block;
-  width: 38px;
-  padding: 10px;
-  background: #26343b;
-  border-radius: 100px;
-  margin-right: 10px;
-  cursor: pointer;
+    color: #ffffff;
+    display: inline-block;
+    width: 38px;
+    padding: 10px;
+    background: #26343b;
+    border-radius: 100px;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
 .follow-us a:hover{
-  color: #ffda86
+color: #ffda86
 }
 
 .home_index_view .playlists-view{
-  background: #ffda86;
-  padding: 40px;
+      background: #ffda86;
+    padding: 40px;
 }
 
 .home_index_view .playlists-view .show{
-  border-right: 15px solid #ffda86;
+      border-right: 15px solid #ffda86;
 }
 
 .home .search-for span::after{
@@ -9584,17 +9584,17 @@ li.no-playlists{
 }
 
 .music-list h3.title span::after{
-  content: '';
-  background: url('../images/seperator-black.png') no-repeat;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  bottom: auto;
-  background-size: cover;
-  width: 97px;
-  height: 5px;
-  top: 14px;
+    content: '';
+    background: url('../images/seperator-black.png') no-repeat;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: auto;
+    background-size: cover;
+    width: 97px;
+    height: 5px;
+    top: 14px;
 }
 
 .music-list ul{
@@ -9603,32 +9603,32 @@ li.no-playlists{
 }
 
 .music-list ul li a{
-  color: #26343b;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 14px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  display: block;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+    color: #26343b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 
 .view-all-music-lists{
-  margin: 0 auto;
-  width: 155px;
-  display: block;
-  margin-bottom: 50px;
-  background: #26343b;
-  border: 0;
-  padding: 13px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 13px;
-  color: #ffda86;
-  border-radius: 100px;
+      margin: 0 auto;
+    width: 155px;
+    display: block;
+    margin-bottom: 50px;
+    background: #26343b;
+    border: 0;
+    padding: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    color: #ffda86;
+    border-radius: 100px;
 }
 
 .view-all-music-lists:hover{
@@ -10508,15 +10508,15 @@ li.no-playlists{
 }
 
 .genres div.genres-carousel span a{
-  display: block;
-  padding: 20px 0;
-  color: #29373F;
-  font-weight: 600;
-  text-transform: capitalize;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-
+    display: block;
+    padding: 20px 0;
+    color: #29373F;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+   
 }
 
 .genres div.genres-carousel span a i{
@@ -10919,12 +10919,6 @@ h2.title{
     font-size: 14px;
   }
 
-
-  .home_index_view + .powered{ 
-    margin-top: 0;
-  }
-
-  
 
   .powered{
     background: #FFDA86;
@@ -11704,53 +11698,53 @@ div.track-play-bar {
     0%   { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
-  /* Smartphones (portrait and landscape) ----------- */
-  @media only screen
-  and (min-width : 0)
-  and (max-width : 1024px) {
-    /* STYLES GO HERE */
-    .desktop{
-      display: none;
-    }
-
-    .mobile{
-      display: block;
-      position: fixed;
-      background: #FFDA86;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-
-    .mobile img{
-      margin: 40px auto;
-      display: block;
-    }
-
-
-    .mobile span{
-      text-align: center;
-      display: block;
-      font-size: 15px;
-      padding: 30px 0;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      line-height: 31px;
-      border-top: 1px dashed;
-      margin: 0 60px;
-    }
-
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 0)
+and (max-width : 1024px) {
+  /* STYLES GO HERE */
+  .desktop{
+    display: none;
   }
-  @media only screen 
-  and (min-width : 768px) 
-  and (max-width : 1024px) {
-    /* Styles */
 
-
-
+  .mobile{
+    display: block;
+    position: fixed;
+    background: #FFDA86;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
+
+
+  .mobile img{
+    margin: 40px auto;
+    display: block;
+  }
+
+
+  .mobile span{
+    text-align: center;
+    display: block;
+    font-size: 15px;
+    padding: 30px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 31px;
+    border-top: 1px dashed;
+    margin: 0 60px;
+  }
+
+}
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) {
+/* Styles */
+  
+ 
+
+}
 /* 
  *  Core Owl Carousel CSS File
  *  v1.3.3
@@ -11839,8 +11833,8 @@ div.track-play-bar {
   height: 50px !important;
   left: -85px !important;
   top: 181px!important;
-  line-height: 49px!important;
-  font-size: 20px!important;
+      line-height: 49px!important;
+    font-size: 20px!important;
 }
 
 .playlists-carousel div.owl-next{
@@ -11848,8 +11842,8 @@ div.track-play-bar {
   height: 50px !important;
   right: -70px !important;
   top: 181px!important;
-  line-height: 49px!important;
-  font-size: 20px!important;
+      line-height: 49px!important;
+    font-size: 20px!important;
 }
 
 .owl-theme .owl-controls .owl-buttons div{
@@ -11877,7 +11871,7 @@ div.track-play-bar {
 }
 
 .owl-theme .owl-controls .owl-buttons div.owl-prev{
-  padding-right: 4px;
+    padding-right: 4px;
 }
 
 .owl-theme .owl-controls .owl-buttons div.owl-next{

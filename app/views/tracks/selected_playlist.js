@@ -64,7 +64,7 @@ module.exports = BaseView.extend({
     onPlayerUnstarted: function(){}, // when the player returns a state of unstarted
     onPlayerEnded: function(){}, // when the player returns a state of ended
     onPlayerPlaying: function(){ $('button.track-paused').click() }, //when the player returns a state of playing 
-    onPlayerBuffering: function(){console.log('buffering')},
+    onPlayerBuffering: function(){$('button.track-paused').click()},
     onPlayerPaused:  function(){ $('button.track-playing').click()},
     onPlayerEnded : that.track_next,
     onErrorNotFound:  that.track_next, // if a video cant be found
