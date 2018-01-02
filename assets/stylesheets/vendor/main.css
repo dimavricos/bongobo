@@ -19,7 +19,11 @@ body{
   color:    #888888;
 }
 
-
+.advert{
+      text-align: center;
+    margin-top: -62px;
+    height: 168px;
+}
 
 .mobile{
   display: none;
